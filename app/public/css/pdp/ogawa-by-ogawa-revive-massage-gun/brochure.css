@@ -1,0 +1,135 @@
+:root {
+  /* colours */
+  --black-color: #231f20;
+
+  /* font weight */
+  --medium: 300;
+  --semibold: 500;
+  --bold: 700;
+}
+.main {
+  font-family:
+    "Ivyepic",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans CJK TC",
+    "Microsoft JhengHei",
+    "PingFang TC",
+    "Heiti TC",
+    sans-serif;
+}
+.main h1,
+.main h2 {
+  color: #fff;
+  letter-spacing: 0.1em;
+}
+.bg {
+  background-color: var(--black-color);
+}
+.full-image-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--img-w, 1241) / var(--img-h, 1754);
+}
+.full-image-frame .overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 25% 5% 8% 5%;
+  pointer-events: none;
+}
+.section-heading {
+  font-weight: var(--bold);
+  margin-bottom: 0.5rem;
+}
+.height-120-img {
+  height: auto;
+  width: auto;
+  max-height: 120px;
+  max-width: 120px;
+}
+
+/* --- Section 2 --- */
+.s2-item {
+  align-self: start;
+}
+.s2-item-title {
+  margin-bottom: 0.5rem;
+}
+
+/* --- Section 3 --- */
+.s3-item {
+  max-width: 28%;
+  justify-items: center;
+}
+.s3-item-blood {
+  --pos-top: 38%;
+  --pos-left: 59%;
+}
+.s3-item-muscle {
+  --pos-top: 68%;
+  --pos-left: 21%;
+}
+.s3-item-lymphatic {
+  --pos-top: 68%;
+  --pos-left: 59%;
+}
+
+/* --- Section 5 --- */
+.s5-full-frame .h3 {
+  margin-bottom: 0;
+}
+
+/* --- Section 6 --- */
+.s6-list {
+  display: grid;
+  gap: 4rem;
+  --pos-top: 33%;
+  --pos-left: 45%;
+}
+
+/* Responsive Layout Adjustments */
+@media (max-width: 991.98px) {
+}
+
+/* Small mobile devices (e.g., up to 575.98px) */
+@media (max-width: 575.98px) {
+  .height-120-img {
+    max-height: 80px;
+    max-width: 50px;
+  }
+  .full-image-frame .overlay {
+    padding: 18% 5% 8% 5%;
+  }
+  .s3-item-blood {
+    --pos-top: 33%;
+  }
+  .s3-item-muscle {
+    --pos-top: 62%;
+  }
+  .s3-item-lymphatic {
+    --pos-top: 62%;
+  }
+  .s6-list {
+    gap: 1.5rem;
+    --pos-top: 22%;
+    --pos-left: 41%;
+  }
+}
+
+/* Tablets (e.g., 576px to 991.98px) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+}
+
+/* Desktops (e.g., 992px and up) */
+@media (min-width: 992px) {
+}

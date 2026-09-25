@@ -1,0 +1,227 @@
+:root {
+  --card: #ffffff;
+  --ink: #0f172a;
+  --muted: #6b7280;
+  --brand: #1e40af;
+  --radius: 18px;
+}
+/* Keep About page reveal animations smooth and not too fast */
+.about-hero [data-reveal],
+.about-cards [data-reveal],
+.awards [data-reveal] {
+  --reveal-duration: 900ms;
+}
+.eyebrow {
+  color: var(--brand);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.5rem;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.about-hero {
+  display: grid;
+  gap: 24px;
+  padding: 28px 0 8px;
+}
+.about-hero__card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.06);
+  height: -webkit-fill-available;
+}
+.about-hero__title {
+  font-size: clamp(35px, 5.5vw, 60px);
+  line-height: 1.05;
+  margin: 0.25rem 0 1rem;
+  color: var(--ink);
+}
+
+.about-hero__body {
+  color: var(--muted);
+  max-width: 60ch;
+  font-size: 20px;
+}
+.about-hero__media img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+.stat {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 20px 18px;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.05);
+}
+.stat__value {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--ink);
+}
+.stat__label {
+  color: var(--muted);
+  font-size: 14px;
+}
+/* -------------------- DESKTOP GRID -------------------- */
+@media (min-width: 900px) {
+  .about-hero {
+    grid-template-columns: 1.25fr 1fr;
+    grid-template-areas:
+      "card media"
+      "card stats";
+    align-items: start;
+    gap: 18px;
+  }
+
+  .about-hero__card {
+    grid-area: card;
+  }
+  .about-hero__media {
+    grid-area: media;
+    align-self: start;
+  }
+  .about-stats {
+    grid-area: stats;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    align-self: start;
+  }
+}
+
+/* -------------------- VISION / MISSION -------------------- */
+.about-cards {
+  display: grid;
+  gap: 16px;
+  padding: 40px 0;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 900px) {
+  .about-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.kv-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 22px 20px;
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.06);
+}
+.kv-card__title {
+  margin: 0.35rem 0 0.5rem;
+  font-size: 20px;
+}
+.kv-card__body {
+  color: var(--muted);
+}
+
+/* ===== Awards & Achievements ===== */
+.awards {
+  padding: 56px 0 40px;
+}
+.awards .title {
+  text-align: center;
+  font-size: clamp(22px, 3vw, 34px);
+  margin-bottom: 22px;
+}
+.aw-carousel {
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.06);
+  padding: 20px 12px 34px;
+}
+.aw-viewport {
+  overflow: hidden;
+}
+.aw-carousel,
+.aw-viewport {
+  position: relative;
+  background: transparent;
+}
+.aw-track {
+  display: flex;
+  will-change: transform;
+  transition: transform 400ms ease;
+}
+.aw-slide {
+  flex: 0 0 calc(100% / var(--per-view, 3));
+  padding: 8px 10px;
+  box-sizing: border-box;
+}
+.aw-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  padding: 10px 6px;
+}
+.aw-card__logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  display: block;
+}
+.aw-card__name {
+  font-weight: 700;
+  color: var(--ink);
+}
+.aw-card__meta {
+  color: var(--muted);
+  font-size: 14px;
+}
+.aw-controls {
+  display: none;
+}
+.aw-nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  cursor: pointer;
+}
+.aw-nav:focus {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+.aw-dots {
+  display: inline-flex;
+  gap: 8px;
+}
+.aw-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: #d1d5db;
+  border: 0;
+  cursor: pointer;
+}
+.aw-dot.is-active {
+  background: #111827;
+}
+/* Optional: respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  [data-awards] [data-track] {
+    transform: none !important;
+  }
+}

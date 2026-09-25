@@ -1,0 +1,84 @@
+:root {
+  /* colours */
+  --brown: #6b5d56;
+  --light-brown: #a28879;
+
+  /* font family */
+  --comfortaa: "Comfortaa", sans-serif;
+  --quicksand: "Quicksand", sans-serif;
+
+  /* font weight */
+  --regular: 400;
+  --bold: 700;
+}
+.main {
+  font-family:
+    var(--quicksand),
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans CJK TC",
+    "Microsoft JhengHei",
+    "PingFang TC",
+    "Heiti TC",
+    sans-serif;
+}
+.main h1,
+.main h2,
+.main h3 {
+  font-family: var(--comfortaa);
+}
+.bg {
+  background-color: #d9c7b8;
+}
+.font-white {
+  color: #fff;
+}
+.font-brown {
+  color: var(--brown);
+}
+.font-light-brown {
+  color: var(--light-brown);
+}
+.full-image-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--img-w, 1240) / var(--img-h, 1754);
+}
+.full-image-frame .overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5%;
+  pointer-events: none;
+}
+.section-heading {
+  font-family: var(--comfortaa);
+  font-weight: var(--bold);
+  letter-spacing: 0.02em;
+  color: #fff;
+  align-self: flex-start;
+}
+
+/* --- Section 2 --- */
+.s2-item {
+  width: 40%;
+  color: #fff;
+}
+
+/* --- Section 3 & Section 4 --- */
+.s3_4-item {
+  max-width: 900px;
+}
+
+/* --- Section 4 --- */
+.s4-overlay {
+  display: block !important;
+}

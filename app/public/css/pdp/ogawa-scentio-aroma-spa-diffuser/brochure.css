@@ -1,0 +1,116 @@
+:root {
+  /* colours */
+  --white: #ffffff;
+  --black: #000000;
+
+  /* font family */
+  --playfair: "PlayfairDisplay", sans-serif;
+  --poppins: "Poppins", sans-serif;
+
+  /* font weight */
+  --regular: 400;
+  --bold: 700;
+}
+.main {
+  font-family:
+    var(--poppins),
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans CJK TC",
+    "Microsoft JhengHei",
+    "PingFang TC",
+    "Heiti TC",
+    sans-serif;
+}
+.main h1,
+.main h2 {
+  font-family: var(--playfair);
+}
+.font-white {
+  color: #fff;
+}
+.font-brown {
+  color: var(--brown);
+}
+.font-light-brown {
+  color: var(--light-brown);
+}
+.full-image-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--img-w, 1240) / var(--img-h, 1754);
+}
+.full-image-frame .overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5%;
+  pointer-events: none;
+}
+.main-title span {
+  font-size: clamp(4rem, 10vw, 8rem);
+}
+.section-heading {
+  font-family: var(--playfair);
+  color: var(--black);
+  font-weight: var(--bold);
+  letter-spacing: 0.02em;
+  align-self: flex-start;
+}
+
+/* --- position --- */
+.pos-scentio-title {
+  --pos-top: 15%;
+  --pos-left: 40%;
+}
+.pos-unmatch {
+  --pos-top: 22%;
+  --pos-left: 40%;
+}
+.pos-powerful {
+  --pos-top: 40%;
+  --pos-left: 40%;
+}
+.pos-smart {
+  --pos-bottom: 31%;
+  --pos-left: 40%;
+}
+.pos-customize {
+  --pos-bottom: 11%;
+  --pos-left: 40%;
+}
+
+/* ---------- Small mobile ---------- */
+@media (max-width: 575.98px) {
+  .pos-scentio-title {
+    --pos-top: 10%;
+    --pos-left: 36%;
+  }
+  .pos-unmatch {
+    --pos-top: 16%;
+    --pos-left: 36%;
+  }
+  .pos-powerful {
+    --pos-top: 35%;
+    --pos-left: 36%;
+  }
+  .pos-smart {
+    --pos-bottom: 32%;
+    --pos-left: 36%;
+  }
+  .pos-customize {
+    --pos-bottom: 10%;
+    --pos-left: 36%;
+  }
+  .s2 p {
+    font-size: clamp(0.55rem, 1vw, 0.8rem);
+  }
+}

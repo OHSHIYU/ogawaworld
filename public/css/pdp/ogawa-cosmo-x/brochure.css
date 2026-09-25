@@ -1,0 +1,1230 @@
+/* =========================================================
+   OGAWA COSMO X3 BROCHURE
+
+   Montserrat Regular — 400
+   Montserrat Medium  — 500
+
+   Background — #151515
+   Text       — #FFFFFF
+========================================================= */
+
+.main.cosmo-brochure {
+  --cosmo-bg: #151515;
+  --cosmo-text: #ffffff;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--cosmo-bg);
+  color: var(--cosmo-text);
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.cosmo-brochure *,
+.cosmo-brochure *::before,
+.cosmo-brochure *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   PAGE 01 — HERO
+========================================================= */
+
+.cosmo-brochure .s1 {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--cosmo-bg);
+  color: var(--cosmo-text);
+}
+
+.cosmo-brochure .s1-visual {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+/* Preserve the complete image without cropping. */
+.cosmo-brochure .s1-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+/* =========================================================
+   PAGE 01 — INTRODUCTION
+
+   Desktop spacing follows the supplied original:
+   introduction height approximately 16.4% of page width.
+========================================================= */
+
+.cosmo-brochure .s1-intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 16.4vw;
+  padding: 5.2vw 3vw 6.7vw;
+
+  background-color: var(--cosmo-bg);
+  color: var(--cosmo-text);
+  text-align: center;
+}
+
+.cosmo-brochure .s1-copy {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25vw;
+  font-weight: 400;
+  font-style: normal;
+
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: var(--cosmo-text);
+}
+
+/* =========================================================
+   PAGE 01 — TABLET AND MOBILE
+
+   Allow natural wrapping below desktop width.
+========================================================= */
+
+@media (max-width: 991.98px) {
+  .cosmo-brochure .s1-desktop-break {
+    display: none;
+  }
+}
+
+/* Tablet */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .cosmo-brochure .s1-intro {
+    min-height: 150px;
+    padding: 42px 35px;
+  }
+
+  .cosmo-brochure .s1-copy {
+    max-width: 720px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+/* Mobile */
+@media (max-width: 575.98px) {
+  .cosmo-brochure .s1-intro {
+    min-height: 0;
+    padding: 32px 22px 36px;
+  }
+
+  .cosmo-brochure .s1-copy {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
+
+/* =========================================================
+   PAGE 02 — X-PLORE
+========================================================= */
+
+.cosmo-brochure .s2 {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--cosmo-bg);
+  color: var(--cosmo-text);
+}
+
+.cosmo-brochure .s2-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.cosmo-brochure .s2-intro,
+.cosmo-brochure .s2-feature {
+  position: absolute;
+  z-index: 1;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: var(--cosmo-text);
+}
+
+/* Upper-left text */
+.cosmo-brochure .s2-intro {
+  top: 9.8%;
+  left: 4.95%;
+  width: 32%;
+  text-align: left;
+}
+
+.cosmo-brochure .s2-title {
+  margin: 0 0 1.65vw;
+  padding: 0;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 4.15vw;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 0.2em;
+  white-space: nowrap;
+  color: var(--cosmo-text);
+}
+
+.cosmo-brochure .s2-description {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.08vw;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: 0;
+  color: var(--cosmo-text);
+}
+
+/* Lower-right text */
+.cosmo-brochure .s2-feature {
+  right: 4.95%;
+  bottom: 7.4%;
+  width: 24%;
+  text-align: right;
+}
+
+.cosmo-brochure .s2-feature-title {
+  margin: 0 0 1.35vw;
+  padding: 0;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3vw;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0.15em;
+  color: var(--cosmo-text);
+}
+
+/* =========================================================
+   PAGE 02 — TABLET / MOBILE
+
+   Keep the complete visual and move text into normal flow
+   so it remains readable on smaller screens.
+========================================================= */
+
+@media (max-width: 991.98px) {
+  .cosmo-brochure .s2 {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cosmo-brochure .s2-intro,
+  .cosmo-brochure .s2-feature {
+    position: static;
+    width: auto;
+    min-width: 0;
+    text-align: left;
+  }
+
+  .cosmo-brochure .s2-intro {
+    grid-row: 1;
+    padding: 36px 24px 28px;
+  }
+
+  .cosmo-brochure .s2-image {
+    grid-row: 2;
+  }
+
+  .cosmo-brochure .s2-feature {
+    grid-row: 3;
+    padding: 28px 24px 36px;
+  }
+
+  .cosmo-brochure .s2-title {
+    margin-bottom: 20px;
+    font-size: clamp(30px, 5.5vw, 48px);
+    letter-spacing: 0.16em;
+  }
+
+  .cosmo-brochure .s2-description {
+    max-width: 42rem;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .cosmo-brochure .s2-feature-title {
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 1.4;
+    letter-spacing: 0.12em;
+  }
+
+  .cosmo-brochure .s2-desktop-break {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .cosmo-brochure .s2-intro {
+    padding: 42px 35px 32px;
+  }
+
+  .cosmo-brochure .s2-feature {
+    padding: 32px 35px 42px;
+  }
+
+  .cosmo-brochure .s2-description {
+    font-size: 16px;
+  }
+
+  .cosmo-brochure .s2-feature-title {
+    font-size: 22px;
+  }
+}
+
+/* =========================================================
+   PAGE 03 — BASE
+========================================================= */
+
+.main.cosmo-brochure .s3 {
+  width: 100%;
+  margin: 0;
+  padding: 7.8% 5.5% 6.5% 7.8%;
+  background-color: var(--cosmo-bg, #151515);
+  color: var(--cosmo-text, #ffffff);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.cosmo-brochure .s3-row {
+  display: grid;
+  align-items: start;
+  width: 100%;
+}
+
+.cosmo-brochure .s3-row > * {
+  min-width: 0;
+}
+
+.cosmo-brochure .s3-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.cosmo-brochure .s3-title,
+.cosmo-brochure .s3-subtitle,
+.cosmo-brochure .s3-copy,
+.cosmo-brochure .s3-programmes-title {
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  color: var(--cosmo-text, #ffffff);
+}
+
+.cosmo-brochure .s3-title {
+  margin: 0;
+  font-size: 1.55vw;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.16em;
+}
+
+.cosmo-brochure .s3-subtitle {
+  margin: 0.5vw 0 2.9vw;
+  font-size: 0.8vw;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+
+.cosmo-brochure .s3-copy {
+  margin: 0;
+  font-size: 1.08vw;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: 0;
+}
+
+.cosmo-brochure .s3-programmes-title {
+  margin: 0 0 3.1vw;
+  font-size: 1.45vw;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.cosmo-brochure .s3-closing {
+  margin-top: 1.35vw;
+}
+
+/* =========================================================
+   PAGE 03 — DESKTOP
+   Top:    mechanism image | text
+   Bottom: text            | touchscreen image
+========================================================= */
+
+@media (min-width: 992px) {
+  .cosmo-brochure .s3-row-top {
+    grid-template-columns: minmax(0, 62fr) minmax(0, 35fr);
+    column-gap: 3%;
+    row-gap: 0;
+  }
+
+  .cosmo-brochure .s3-row-top > .s3-image {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .cosmo-brochure .s3-mechanism {
+    grid-column: 2;
+    grid-row: 1;
+    padding-top: 9.5vw;
+  }
+
+  .cosmo-brochure .s3-mechanism .s3-copy {
+    max-width: 27vw;
+  }
+
+  .cosmo-brochure .s3-row-bottom {
+    grid-template-columns: minmax(0, 31fr) minmax(0, 66fr);
+    column-gap: 3%;
+    row-gap: 0;
+    margin-top: 5.5vw;
+  }
+
+  .cosmo-brochure .s3-programmes {
+    grid-column: 1;
+    grid-row: 1;
+    padding-top: 2.55vw;
+  }
+
+  .cosmo-brochure .s3-row-bottom > .s3-image {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+/* =========================================================
+   PAGE 03 — SMALL SCREENS ONLY
+   Both groups: image → title → description
+========================================================= */
+
+@media (max-width: 991.98px) {
+  .main.cosmo-brochure .s3 {
+    padding: 32px 22px 40px;
+  }
+
+  .cosmo-brochure .s3-row-top,
+  .cosmo-brochure .s3-row-bottom {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .cosmo-brochure .s3-row-bottom {
+    margin-top: 40px;
+  }
+
+  .cosmo-brochure .s3-row-top > .s3-image,
+  .cosmo-brochure .s3-row-bottom > .s3-image {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .cosmo-brochure .s3-mechanism,
+  .cosmo-brochure .s3-programmes {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 0;
+  }
+
+  .cosmo-brochure .s3-title {
+    font-size: 20px;
+    line-height: 1.35;
+    letter-spacing: 0.1em;
+  }
+
+  .cosmo-brochure .s3-subtitle {
+    margin: 8px 0 20px;
+    font-size: 11px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+  }
+
+  .cosmo-brochure .s3-copy {
+    max-width: none;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .cosmo-brochure .s3-programmes-title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .cosmo-brochure .s3-closing {
+    margin-top: 20px;
+  }
+}
+
+/* Tablet spacing and typography */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .main.cosmo-brochure .s3 {
+    padding: 48px 35px;
+  }
+
+  .cosmo-brochure .s3-title {
+    font-size: 28px;
+  }
+
+  .cosmo-brochure .s3-programmes-title {
+    font-size: 24px;
+  }
+
+  .cosmo-brochure .s3-copy {
+    font-size: 16px;
+  }
+}
+
+/* =========================================================
+   PAGE 04 — FULL BROCHURE IMAGE
+========================================================= */
+
+.cosmo-brochure .s4 {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--cosmo-bg, #151515);
+}
+
+.cosmo-brochure .s4-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+/* =========================================================
+   PAGE 05 — X-CITE / FLEX TECHNOLOGY
+========================================================= */
+
+.cosmo-brochure .s5 {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--cosmo-bg, #151515);
+  color: var(--cosmo-text, #ffffff);
+}
+
+.cosmo-brochure .s5-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.cosmo-brochure .s5-intro,
+.cosmo-brochure .s5-details {
+  min-width: 0;
+}
+
+.cosmo-brochure .s5-title,
+.cosmo-brochure .s5-heading,
+.cosmo-brochure .s5-subheading,
+.cosmo-brochure .s5-intro-copy,
+.cosmo-brochure .s5-copy {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  color: var(--cosmo-text, #ffffff);
+}
+
+.cosmo-brochure .s5-title {
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 0.22em;
+}
+
+.cosmo-brochure .s5-heading {
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.18em;
+}
+
+.cosmo-brochure .s5-subheading {
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.15em;
+}
+
+.cosmo-brochure .s5-intro-copy,
+.cosmo-brochure .s5-copy {
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+/* =========================================================
+   PAGE 05 — DESKTOP
+   Match the original brochure composition.
+========================================================= */
+
+@media (min-width: 992px) {
+  .cosmo-brochure .s5 {
+    aspect-ratio: 2237 / 2009;
+  }
+
+  .cosmo-brochure .s5-image-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 57.5%;
+  }
+
+  .cosmo-brochure .s5-intro {
+    position: absolute;
+    z-index: 1;
+    top: 19.4%;
+    right: 9%;
+    width: 26%;
+    text-align: center;
+  }
+
+  .cosmo-brochure .s5-title {
+    margin-bottom: 2.2vw;
+    font-size: 4.15vw;
+    /* Compensate for trailing letter spacing when centering. */
+    text-indent: 0.22em;
+  }
+
+  .cosmo-brochure .s5-intro-copy {
+    font-size: 1.28vw;
+  }
+
+  /*
+   * The second asset includes dark space above the footrest.
+   * Position the full image without cropping that space.
+   */
+  .cosmo-brochure .s5-image-bottom {
+    position: absolute;
+    top: 45%;
+    right: 5%;
+    width: 50%;
+  }
+
+  .cosmo-brochure .s5-details {
+    position: absolute;
+    z-index: 1;
+    top: 62%;
+    left: 10%;
+    width: 31%;
+    text-align: left;
+  }
+
+  .cosmo-brochure .s5-heading {
+    margin-bottom: 0.55vw;
+    font-size: 1.42vw;
+  }
+
+  .cosmo-brochure .s5-subheading {
+    margin-bottom: 1.4vw;
+    font-size: 1.08vw;
+  }
+
+  .cosmo-brochure .s5-copy {
+    font-size: 1.08vw;
+  }
+
+  .cosmo-brochure .s5-thermo {
+    margin-top: 6.1vw;
+  }
+
+  .cosmo-brochure .s5-thermo .s5-heading {
+    margin-bottom: 1.35vw;
+  }
+}
+
+/* =========================================================
+   PAGE 05 — SMALL SCREENS
+   Image → introduction → image → feature descriptions
+========================================================= */
+
+@media (max-width: 991.98px) {
+  .cosmo-brochure .s5 {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+  }
+
+  .cosmo-brochure .s5-image {
+    position: static;
+    width: 100%;
+  }
+
+  .cosmo-brochure .s5-intro,
+  .cosmo-brochure .s5-details {
+    position: static;
+    width: auto;
+    padding: 0 22px;
+  }
+
+  .cosmo-brochure .s5-intro {
+    margin-top: 24px;
+    text-align: center;
+  }
+
+  .cosmo-brochure .s5-title {
+    margin-bottom: 20px;
+    font-size: 36px;
+    text-indent: 0.22em;
+  }
+
+  .cosmo-brochure .s5-intro-copy,
+  .cosmo-brochure .s5-copy {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .cosmo-brochure .s5-image-bottom {
+    margin-top: 8px;
+  }
+
+  .cosmo-brochure .s5-details {
+    margin-top: 24px;
+    text-align: left;
+  }
+
+  .cosmo-brochure .s5-heading {
+    margin-bottom: 10px;
+    font-size: 20px;
+    letter-spacing: 0.12em;
+  }
+
+  .cosmo-brochure .s5-subheading {
+    margin-bottom: 20px;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+  }
+
+  .cosmo-brochure .s5-thermo {
+    margin-top: 32px;
+  }
+
+  .cosmo-brochure .s5-thermo .s5-heading {
+    margin-bottom: 16px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .cosmo-brochure .s5-intro,
+  .cosmo-brochure .s5-details {
+    padding-right: 35px;
+    padding-left: 35px;
+  }
+
+  .cosmo-brochure .s5-title {
+    font-size: 48px;
+  }
+
+  .cosmo-brochure .s5-intro-copy,
+  .cosmo-brochure .s5-copy {
+    font-size: 16px;
+  }
+
+  .cosmo-brochure .s5-heading {
+    font-size: 24px;
+  }
+}
+
+/* =========================================================
+   PAGE 06 — FULL BROCHURE IMAGE
+========================================================= */
+
+.cosmo-brochure .s6 {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--cosmo-bg, #151515);
+}
+
+.cosmo-brochure .s6-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+/* =========================================================
+   PAGE 07 — X-CEED
+========================================================= */
+
+.cosmo-brochure .s7 {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--cosmo-bg, #151515);
+  color: var(--cosmo-text, #ffffff);
+}
+
+.cosmo-brochure .s7-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.cosmo-brochure .s7-content {
+  text-align: center;
+}
+
+.cosmo-brochure .s7-title,
+.cosmo-brochure .s7-copy {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: var(--cosmo-text, #ffffff);
+}
+
+.cosmo-brochure .s7-title {
+  line-height: 1.15;
+  letter-spacing: 0.22em;
+  text-indent: 0.22em;
+}
+
+.cosmo-brochure .s7-copy {
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+/* =========================================================
+   PAGE 07 — DESKTOP
+========================================================= */
+
+@media (min-width: 992px) {
+  .cosmo-brochure .s7-content {
+    position: absolute;
+    top: 32.5%;
+    right: 5.5%;
+    width: 36.5%;
+  }
+
+  .cosmo-brochure .s7-title {
+    margin-bottom: 2.4vw;
+    font-size: 4.15vw;
+  }
+
+  .cosmo-brochure .s7-copy {
+    font-size: 1.28vw;
+  }
+}
+
+/* =========================================================
+   PAGE 07 — TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 991.98px) {
+  .cosmo-brochure .s7-content {
+    position: static;
+    width: auto;
+    padding: 32px 22px 40px;
+  }
+
+  .cosmo-brochure .s7-title {
+    margin-bottom: 20px;
+    font-size: 36px;
+  }
+
+  .cosmo-brochure .s7-copy {
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .cosmo-brochure .s7-desktop-break {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .cosmo-brochure .s7-content {
+    padding: 42px 35px;
+  }
+
+  .cosmo-brochure .s7-title {
+    font-size: 48px;
+  }
+
+  .cosmo-brochure .s7-copy {
+    font-size: 16px;
+  }
+}
+
+/* PAGE 07 — Small screens: text before image */
+@media (max-width: 991.98px) {
+  .cosmo-brochure .s7 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cosmo-brochure .s7-content {
+    order: 1;
+  }
+
+  .cosmo-brochure .s7-image {
+    order: 2;
+  }
+}
+
+/* =========================================================
+   PAGE 08 — PERSONALISED MASSAGE CUSTOMISATION
+========================================================= */
+
+.cosmo-brochure .s8 {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--cosmo-bg, #151515);
+  color: var(--cosmo-text, #ffffff);
+}
+
+.cosmo-brochure .s8-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.cosmo-brochure .s8-content {
+  text-align: left;
+}
+
+.cosmo-brochure .s8-title,
+.cosmo-brochure .s8-copy {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  color: var(--cosmo-text, #ffffff);
+}
+
+.cosmo-brochure .s8-title {
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.16em;
+}
+
+.cosmo-brochure .s8-copy {
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: 0;
+}
+
+/* =========================================================
+   PAGE 08 — DESKTOP
+========================================================= */
+
+@media (min-width: 992px) {
+  .cosmo-brochure .s8-content {
+    position: absolute;
+    z-index: 1;
+    top: 47.5%;
+    left: 3.4%;
+    width: 27%;
+  }
+
+  .cosmo-brochure .s8-title {
+    margin-bottom: 2.1vw;
+    font-size: 1.4vw;
+  }
+
+  .cosmo-brochure .s8-copy {
+    font-size: 1.25vw;
+  }
+}
+
+/* =========================================================
+   PAGE 08 — SMALL SCREENS
+   Text first, followed by the complete image.
+========================================================= */
+
+@media (max-width: 991.98px) {
+  .cosmo-brochure .s8-content {
+    position: static;
+    width: auto;
+    padding: 32px 22px 36px;
+  }
+
+  .cosmo-brochure .s8-title {
+    margin-bottom: 22px;
+    font-size: 22px;
+    line-height: 1.35;
+    letter-spacing: 0.12em;
+  }
+
+  .cosmo-brochure .s8-copy {
+    max-width: 640px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .cosmo-brochure .s8-desktop-break {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .cosmo-brochure .s8-content {
+    padding: 42px 35px;
+  }
+
+  .cosmo-brochure .s8-title {
+    font-size: 28px;
+  }
+
+  .cosmo-brochure .s8-copy {
+    font-size: 16px;
+  }
+}
+
+/* =========================================================
+   PAGE 09 — ENHANCED ZERO-GRAVITY ELEVATION+
+========================================================= */
+
+.cosmo-brochure .s9 {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--cosmo-bg, #151515);
+  color: var(--cosmo-text, #ffffff);
+}
+
+.cosmo-brochure .s9-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.cosmo-brochure .s9-content {
+  text-align: left;
+}
+
+.cosmo-brochure .s9-title,
+.cosmo-brochure .s9-copy {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  color: var(--cosmo-text, #ffffff);
+}
+
+.cosmo-brochure .s9-title {
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.16em;
+}
+
+.cosmo-brochure .s9-copy {
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: 0;
+}
+
+/* =========================================================
+   PAGE 09 — DESKTOP
+========================================================= */
+
+@media (min-width: 992px) {
+  .cosmo-brochure .s9-content {
+    position: absolute;
+    z-index: 1;
+    top: 6.5%;
+    left: 80.3%;
+    width: 17%;
+  }
+
+  .cosmo-brochure .s9-title {
+    margin-bottom: 2.3vw;
+    font-size: 1.4vw;
+  }
+
+  .cosmo-brochure .s9-copy {
+    font-size: 1.25vw;
+  }
+}
+
+/* =========================================================
+   PAGE 09 — SMALL SCREENS
+   Text first, followed by the complete image.
+========================================================= */
+
+@media (max-width: 991.98px) {
+  .cosmo-brochure .s9-content {
+    position: static;
+    width: auto;
+    padding: 32px 22px 36px;
+  }
+
+  .cosmo-brochure .s9-title {
+    margin-bottom: 22px;
+    font-size: 22px;
+    line-height: 1.35;
+    letter-spacing: 0.12em;
+  }
+
+  .cosmo-brochure .s9-copy {
+    max-width: 640px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .cosmo-brochure .s9-desktop-break {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .cosmo-brochure .s9-content {
+    padding: 42px 35px;
+  }
+
+  .cosmo-brochure .s9-title {
+    font-size: 28px;
+  }
+
+  .cosmo-brochure .s9-copy {
+    font-size: 16px;
+  }
+}
+
+/* =========================================================
+   PAGE 10 — REFINED LIVING
+========================================================= */
+
+.cosmo-brochure .s10 {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--cosmo-bg, #151515);
+  color: var(--cosmo-text, #ffffff);
+}
+
+.cosmo-brochure .s10-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.cosmo-brochure .s10-content {
+  text-align: left;
+}
+
+.cosmo-brochure .s10-copy {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: var(--cosmo-text, #ffffff);
+}
+
+/* =========================================================
+   PAGE 10 — DESKTOP
+========================================================= */
+
+@media (min-width: 992px) {
+  .cosmo-brochure .s10-content {
+    position: absolute;
+    z-index: 1;
+    top: 15.5%;
+    left: 3.4%;
+    width: 26%;
+  }
+
+  .cosmo-brochure .s10-copy {
+    font-size: 1.4vw;
+  }
+}
+
+/* =========================================================
+   PAGE 10 — SMALL SCREENS
+   Text first, followed by the complete image.
+========================================================= */
+
+@media (max-width: 991.98px) {
+  .cosmo-brochure .s10-content {
+    position: static;
+    width: auto;
+    padding: 32px 22px 36px;
+  }
+
+  .cosmo-brochure .s10-copy {
+    max-width: 640px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .cosmo-brochure .s10-desktop-break {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .cosmo-brochure .s10-content {
+    padding: 42px 35px;
+  }
+
+  .cosmo-brochure .s10-copy {
+    font-size: 16px;
+  }
+}
+
+/* =========================================================
+   PAGE 11 / PAGE 12 — FULL BROCHURE IMAGES
+========================================================= */
+
+.cosmo-brochure .s11,
+.cosmo-brochure .s12 {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--cosmo-bg, #151515);
+}
+
+.cosmo-brochure .s11-image,
+.cosmo-brochure .s12-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+

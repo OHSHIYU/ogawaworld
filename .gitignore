@@ -1,0 +1,8 @@
+# Environment files
+.env
+.env.*
+
+# Vendor / cache
+vendor/
+storage/cache/
+storage/logs/

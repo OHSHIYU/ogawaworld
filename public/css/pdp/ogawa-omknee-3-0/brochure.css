@@ -1,0 +1,875 @@
+/* 重置 & 基础 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;  /* 或 #f7f8f8，用白色/浅色，不会有黑背景 */
+}
+
+/* 图片区块 - 不用固定比例，让图片自然高度 */
+.full-image {
+    position: relative;
+    width: 100%;
+    /* 删除 aspect-ratio，让图片自己决定高度 */
+    overflow: hidden;
+}
+
+.full-image img {
+    width: 100%;
+    height: auto;  /* 按原始比例自动高度 */
+    display: block;
+}
+
+/* 叠加文字 - 相对定位到图片上 */
+.full-image.with-text {
+    position: relative;
+}
+
+.full-image.with-text .text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);  /* 半透明层让白色文字更清楚，可调浅 */
+}
+
+/* 文字样式 */
+.text-overlay h2 {
+    font-size: clamp(1.6rem, 5vw, 3rem);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', 'Myriad Pro', sans-serif;
+}
+
+.text-overlay .big {
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.text-overlay .all-new {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    margin-top: 1.5rem;
+    font-weight: 500;
+}
+
+.text-overlay .tags {
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
+    margin: 0.5rem 0;
+    font-weight: 500;
+}
+
+.text-overlay h3 {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.text-overlay .desc {
+    font-size: clamp(0.8rem, 2.8vw, 1rem);
+    max-width: 85%;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+}
+
+/* 黑色四区域 - 这个黑背景是你需要的，所以保留 */
+.black-four-areas {
+    background-color: #000000;
+    width: 100%;
+    padding: 70px 24px;
+}
+
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.area-card {
+    text-align: center;
+    color: #ffffff;
+}
+
+.area-card img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.area-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.area-card p {
+    font-size: 0.85rem;
+    color: #dddddd;
+    line-height: 1.4;
+}
+
+/* ThermaFlow 图标区 */
+.therma-icons {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.therma-icons img {
+    width: 60px;
+    height: auto;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .areas-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    .black-four-areas {
+        padding: 50px 20px;
+    }
+    .area-card img {
+        width: 60px;
+    }
+    .text-overlay .desc {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .areas-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .therma-icons img {
+        width: 45px;
+    }
+}
+
+/* ========== BROCHURE-02 完整 CSS ========== */
+.full-image.with-text .text-overlay.brochure-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+.brochure-2 .top-spacer {
+    flex: 1;
+}
+
+.brochure-2 .top-text-group {
+    flex: 0;
+    text-align: center;
+}
+
+.brochure-2 .middle-spacer {
+    flex: 3;
+}
+
+.brochure-2 .bottom-text-group {
+    flex: 0;
+    text-align: center;
+}
+
+.brochure-2 .bottom-spacer {
+    flex: 0.5;
+}
+
+/* 上半部文字样式 */
+.brochure-2 .line-1 {
+    font-size: clamp(1rem, 3.5vw, 1.3rem);
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0;
+    font-family: inherit;
+}
+
+.brochure-2 .spacer-1 {
+    height: 1rem;
+}
+
+.brochure-2 .line-from {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    color: #ffffff;
+    font-weight: 400;
+    margin: 0;
+    margin-top: 0.3rem;
+    font-family: inherit;
+}
+
+.brochure-2 .line-first {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    color: #ffffff;
+    font-weight: 400;
+    margin: 0.1rem 0;
+    letter-spacing: 2px;
+    font-family: inherit;
+}
+
+.brochure-2 .line-to {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    color: #ffffff;
+    font-weight: 400;
+    margin: 0.1rem 0;
+    font-family: inherit;
+}
+
+.brochure-2 .line-finest {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    color: #4A90E2;
+    font-weight: 600;
+    margin: 0.1rem 0;
+    letter-spacing: 2px;
+    font-family: inherit;
+}
+
+/* 下半部文字样式 */
+.brochure-2 .line-allnew {
+    font-size: clamp(1.5rem, 7vw, 3.5rem);
+    color: #4A90E2;
+    font-weight: 600;
+    margin: 0.2rem 0;
+    letter-spacing: 2px;
+    font-family: inherit;
+}
+
+.brochure-2 .line-nodes {
+    font-size: clamp(0.85rem, 2.8vw, 1.1rem);
+    color: #ffffff;
+    font-weight: 500;
+    margin: 0.2rem 0;
+    letter-spacing: 1px;
+    font-family: inherit;
+}
+
+/* ========== 手机端调整（字体缩小 + 往上移） ========== */
+@media (max-width: 768px) {
+    /* 整体往上移 */
+    .brochure-2 .top-spacer {
+        flex: 0.3;  /* 减少顶部空白 */
+    }
+    
+    /* 上半部字体缩小 */
+    .brochure-2 .line-1 {
+        font-size: 0.7rem;
+    }
+    
+    .brochure-2 .line-from {
+        font-size: 0.65rem;
+    }
+    
+    .brochure-2 .line-first {
+        font-size: 1.6rem;
+    }
+    
+    .brochure-2 .line-to {
+        font-size: 0.65rem;
+    }
+    
+    .brochure-2 .line-finest {
+        font-size: 1.8rem;
+    }
+    
+    /* 减少中间空白，下半部往上提 */
+    .brochure-2 .middle-spacer {
+        flex: 3;
+    }
+    
+    /* 原有间距保持 */
+    .brochure-2 .spacer-1 {
+        height: 0.6rem;
+    }
+}
+
+/* 小手机端 */
+@media (max-width: 480px) {
+    .brochure-2 .line-1 {
+        font-size: 0.65rem;
+    }
+    
+    .brochure-2 .line-from {
+        font-size: 0.6rem;
+    }
+    
+    .brochure-2 .line-first {
+        font-size: 1.4rem;
+    }
+    
+    .brochure-2 .line-to {
+        font-size: 0.6rem;
+    }
+    
+    .brochure-2 .line-finest {
+        font-size: 1.6rem;
+    }
+    
+    .brochure-2 .spacer-1 {
+        height: 0.4rem;
+    }
+}
+/* ========== BROCHURE-03 完整 CSS ========== */
+.full-image.with-text .text-overlay.brochure-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 0;
+    font-family: 'Inter', 'Poppins', 'Myriad Pro', sans-serif;
+    height: 100%;
+}
+
+/* 顶部浅灰色条 */
+.brochure-3 .gray-bar {
+    width: 100%;
+    background-color: #D3D3D3;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.brochure-3 .gray-title {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: 1px;
+    font-family: inherit;
+}
+
+.brochure-3 .gray-tags {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    font-weight: 500;
+    color: #ffffff;
+    margin: 8px 0 0 0;
+    font-family: inherit;
+}
+
+/* 箭头变成蓝色 */
+.brochure-3 .gray-tags .blue-arrow {
+    color: #4A90E2 !important;
+    font-weight: 700;
+    display: inline-block;
+}
+
+/* 中间内容 - 用 margin-top 控制位置，margin-bottom: auto 让底部文字贴底 */
+.brochure-3 .middle-content {
+    text-align: center;
+    margin-top: 15%;
+    margin-bottom: auto;
+}
+
+.brochure-3 .next-gen {
+    font-size: clamp(2rem, 8vw, 4.5rem);
+    font-weight: 600;
+    color: #4A90E2;
+    margin: 0;
+    letter-spacing: 2px;
+    font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+.brochure-3 .reflexology {
+    font-size: clamp(1.2rem, 4.5vw, 2rem);
+    font-weight: 500;
+    color: #ffffff;
+    margin: 10px 0 0 0;
+    letter-spacing: 1px;
+    font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+/* 底部描述文字 - 贴在底部 */
+.brochure-3 .bottom-desc {
+    text-align: center;
+    margin-bottom: 8%;
+}
+
+.brochure-3 .bottom-desc p {
+    font-size: clamp(0.75rem, 2.5vw, 0.95rem);
+    color: #ffffff;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ========== 手机端 (≤768px) - 缩小字体 + 往上移 ========== */
+@media (max-width: 768px) {
+    .brochure-3 .gray-bar {
+        padding: 10px 0;
+    }
+    .brochure-3 .gray-title,
+    .brochure-3 .gray-tags {
+        font-size: 0.8rem;
+    }
+    
+    /* 中间内容往上移 + 字体缩小 */
+    .brochure-3 .middle-content {
+        margin-top: 3%;  /* 从 8% 改成 3%，往上移 */
+    }
+    
+    .brochure-3 .next-gen {
+        font-size: 1.6rem;  /* 缩小 */
+        font-weight: 600;
+    }
+    
+    .brochure-3 .reflexology {
+        font-size: 1rem;    /* 缩小 */
+        margin-top: 5px;
+    }
+    
+    .brochure-3 .bottom-desc {
+        margin-bottom: 5%;
+    }
+    .brochure-3 .bottom-desc p {
+        font-size: 0.7rem;
+        max-width: 90%;
+    }
+}
+
+/* ========== 小手机端 (≤480px) - 再缩小 ========== */
+@media (max-width: 480px) {
+    .brochure-3 .gray-bar {
+        padding: 8px 0;
+    }
+    .brochure-3 .gray-title,
+    .brochure-3 .gray-tags {
+        font-size: 0.7rem;
+    }
+    
+    .brochure-3 .middle-content {
+        margin-top: 2%;  /* 更往上 */
+    }
+    
+    .brochure-3 .next-gen {
+        font-size: 1.3rem;
+    }
+    
+    .brochure-3 .reflexology {
+        font-size: 0.85rem;
+    }
+    
+    .brochure-3 .bottom-desc {
+        margin-bottom: 3%;
+    }
+    .brochure-3 .bottom-desc p {
+        font-size: 0.65rem;
+        max-width: 95%;
+    }
+}
+
+/* ========== BROCHURE-04 完整 CSS ========== */
+.full-image.with-text .text-overlay.brochure-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0;
+}
+
+/* 文字容器 - 电脑端 30% 到 70% */
+.brochure-4 .text-wrapper {
+    max-width: 40%;
+    width: auto;
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: left;
+}
+
+/* 电脑端字体放大 */
+@media (min-width: 992px) {
+    .brochure-4 .explore-title {
+        font-size: 2.2rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin: 0 0 25px 0;
+        letter-spacing: 1px;
+        font-family: 'Inter', 'Poppins', sans-serif;
+    }
+    
+    .brochure-4 .explore-desc {
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: #ffffff;
+        line-height: 1.7;
+        margin: 0;
+        font-family: 'Inter', 'Poppins', sans-serif;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+}
+
+/* 手机端 - 改成 10% 到 90% */
+@media (max-width: 991px) {
+    /* 手机端文字容器 - 左右各留 10% */
+    .brochure-4 .text-wrapper {
+        max-width: 80%;        /* 从 40% 改成 80% */
+        margin-left: 10%;      /* 从 30% 改成 10% */
+        margin-right: 10%;     /* 从 30% 改成 10% */
+        text-align: left;
+    }
+    
+    .brochure-4 .explore-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin: 0 0 12px 0;
+        letter-spacing: 1px;
+        font-family: 'Inter', 'Poppins', sans-serif;
+    }
+    
+    .brochure-4 .explore-desc {
+        font-size: 0.7rem;
+        font-weight: 400;
+        color: #ffffff;
+        line-height: 1.5;
+        margin: 0;
+        font-family: 'Inter', 'Poppins', sans-serif;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+}
+
+/* 小手机端进一步缩小 */
+@media (max-width: 480px) {
+    .brochure-4 .text-wrapper {
+        max-width: 85%;
+        margin-left: 7.5%;
+        margin-right: 7.5%;
+    }
+    
+    .brochure-4 .explore-title {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    .brochure-4 .explore-desc {
+        font-size: 0.65rem;
+        line-height: 1.4;
+    }
+}
+
+/* ========== BROCHURE-05 完整 CSS ========== */
+.full-image.with-text .text-overlay.brochure-5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* 文字容器 - 用 margin-top 微调往下 */
+.brochure-5 .text-wrapper {
+    text-align: center;
+    margin-top: -5%;  /* 正值往下移，负值往上移 */
+}
+
+/* DETACHABLE - 蓝色，大字体 */
+.brochure-5 .detachable-title {
+    font-size: clamp(3rem, 12vw, 6.5rem);
+    font-weight: 600;
+    color: #4A90E2;
+    margin: 0 0 20px 0;
+    letter-spacing: 4px;
+    font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+/* One Device... - 白色，在一行内 */
+.brochure-5 .detachable-sub {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', 'Poppins', sans-serif;
+    white-space: nowrap;
+}
+
+/* 电脑端 */
+@media (min-width: 992px) {
+    .brochure-5 .detachable-sub {
+        font-size: 1.4rem;
+    }
+}
+
+/* 手机端 */
+@media (max-width: 600px) {
+    .brochure-5 .detachable-sub {
+        white-space: normal;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .brochure-5 .detachable-sub {
+        font-size: 0.9rem;
+    }
+}
+/* ========== 第六面：四个部位 ========== */
+.areas-section {
+    background-color: #000000;
+    width: 100%;
+    padding: 60px 24px;
+}
+
+/* 顶部标题 */
+.areas-header {
+    text-align: center;
+    margin-bottom: 50px;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.areas-main-title {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+.areas-sub-title {
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0;
+    font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+/* 四个部位网格 */
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.area-card {
+    text-align: center;
+    color: #ffffff;
+}
+
+/* 图标放大 */
+.area-card img {
+    width: 250px;
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* 标题 */
+.area-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-family: 'Inter', 'Poppins', sans-serif;
+    color: #ffffff;
+}
+
+/* 描述文字 */
+.area-card p {
+    font-size: 0.85rem;
+    color: #cccccc;
+    line-height: 1.5;
+    font-family: 'Inter', 'Poppins', sans-serif;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 平板：一行2个 */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .areas-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+/* 手机 + 小手机：都一行2个 */
+@media (max-width: 768px) {
+    .areas-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .areas-section {
+        padding: 40px 16px;
+    }
+    
+    .areas-header {
+        margin-bottom: 25px;
+    }
+    
+    .area-card img {
+        width: 100px;
+        max-width: 70%;
+    }
+    
+    .area-card h3 {
+        font-size: 1rem;
+    }
+    
+    .area-card p {
+        font-size: 0.65rem;
+        max-width: 95%;
+    }
+}
+
+/* ========== BROCHURE-07 完整 CSS ========== */
+
+/* 电脑端和手机端都靠右 */
+.full-image.with-text .text-overlay.brochure-7 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 5% 8% 5% 5%;
+}
+
+.therma-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: auto;
+}
+
+/* ========== 电脑端 (≥992px) ========== */
+@media (min-width: 992px) {
+    .therma-content {
+        gap: 40px;
+        max-width: 65%;
+    }
+    
+    .therma-title {
+        font-size: 5rem !important;
+        font-weight: 700;
+        color: #ffffff;
+        margin: 0;
+        font-family: 'Inter', 'Poppins', sans-serif;
+        text-align: right;
+        line-height: 1.2;
+    }
+    
+    .therma-desc {
+        font-size: 1.6rem;
+        color: #ffffff;
+        line-height: 1.6;
+        margin: 0;
+        font-family: 'Inter', 'Poppins', sans-serif;
+        text-align: right;
+    }
+    
+    .therma-icons {
+        display: flex;
+        gap: 50px;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+    }
+    
+    .therma-icons img {
+        width: 100px;
+        height: auto;
+    }
+}
+
+/* ========== 手机端 (≤991px) ========== */
+@media (max-width: 991px) {
+    .full-image.with-text .text-overlay.brochure-7 {
+        align-items: flex-end;
+        text-align: right;
+        padding: 5% 4% 5% 5%;
+    }
+    
+    .therma-content {
+        align-items: flex-end;
+        max-width: 80%;
+        gap: 4px;              /* 空隙缩小：6px → 4px */
+    }
+    
+    /* 标题变大 */
+    .therma-title {
+        font-size: 0.9rem !important;   /* 0.55rem → 0.9rem（变大） */
+        font-weight: 700;
+        color: #ffffff;
+        margin: 0;
+        font-family: 'Inter', 'Poppins', sans-serif;
+        text-align: right;
+        line-height: 1.3;
+    }
+    
+    /* 描述变小 */
+    .therma-desc {
+        font-size: 0.6rem !important;   /* 0.75rem → 0.6rem（变小） */
+        color: #ffffff;
+        line-height: 1.4;
+        margin: 0;
+        font-family: 'Inter', 'Poppins', sans-serif;
+        text-align: right;
+    }
+    
+    /* 图标 */
+    .therma-icons {
+        display: flex;
+        gap: 15px;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+    }
+    
+    .therma-icons img {
+        width: 45px !important;
+        height: auto;
+    }
+}
+
+/* ========== 小手机端 (≤480px) ========== */
+@media (max-width: 480px) {
+    .therma-content {
+        max-width: 85%;
+        gap: 3px;
+    }
+    
+    .therma-title {
+        font-size: 0.8rem !important;
+    }
+    
+    .therma-desc {
+        font-size: 0.55rem !important;
+        line-height: 1.3;
+    }
+    
+    .therma-icons {
+        gap: 12px;
+    }
+    
+    .therma-icons img {
+        width: 38px !important;
+    }
+}

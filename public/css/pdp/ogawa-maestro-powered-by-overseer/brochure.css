@@ -1,0 +1,1805 @@
+/* ========== 字体引入 ========== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Avenir+Next:wght@400;500;600&display=swap');
+
+/* ========== MAESTRO 页面专用字体（只影响 .main 内部） ========== */
+/* 标题字体 */
+.main .title-2-main,
+.main .title-2-sub,
+.main .title-3,
+.main .title-5,
+.main .title-7,
+.main .title-12,
+.main .title-15,
+.main .track-title,
+.main .bottom-left h2,
+.main .bottom-left h3,
+.main .feature-group h3,
+.main .benefits h3,
+.main .tech-item h4,
+.main .page-9 h2,
+.main .page-9 h3,
+.main .page-11 h2,
+.main .page-14 h2,
+.main .col h3,
+.main .col-12 h3 {
+    font-family: 'Montserrat', 'Trebuchet MS', 'Arial Black', sans-serif !important;
+    font-weight: 700;
+}
+
+/* 内容字体 */
+.main p,
+.main li,
+.main span,
+.main .desc-3,
+.main .desc-5,
+.main .desc-7,
+.main .benefits li,
+.main .feature-group li,
+.main .col-12 p,
+.main .page-11 p,
+.main .page-14 p,
+.main .grid-item span,
+.main .col p,
+.main .ref-link,
+.main .tech-item p,
+.main .zero-desc,
+.main .neck-chain,
+.main .feature-7 p,
+.main .btn-overseer-3,
+.main .bottom-left p,
+.main .right-content p {
+    font-family: 'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif !important;
+    font-weight: 400;
+}
+
+/* ========== 基础样式 ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.full-image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.full-image img.bg-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.full-image.with-text {
+    position: relative;
+}
+
+.full-image.with-text .text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    pointer-events: auto;
+}
+/* ========== 第1面：纯图片，无额外样式 ========== */
+/* ========== 第2面：深紫色纯色背景 ========== */
+.page-2-solid {
+    background-color: #4a1d55;
+    width: 100%;
+    padding: 60px 24px;
+}
+
+.container-2 {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.top-area {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.title-2-main {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.title-2-sub {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 4px;
+}
+
+.three-cols {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1;
+    text-align: center;
+    min-width: 280px;
+    background: transparent;
+    padding: 16px;
+}
+
+.col img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    margin-bottom: 1.5rem;
+}
+
+.col h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.col p {
+    font-size: 0.9rem;
+    color: #f0f0f0;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.ref-link {
+    margin-top: 1rem;
+    font-size: 0.7rem;
+}
+
+.ref-link a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.ref-link a:hover {
+    text-decoration: none;
+}
+
+/* ========== 平板 ========== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .page-2-solid {
+        padding: 50px 20px;
+    }
+    .three-cols {
+        gap: 1.5rem;
+    }
+    .col img {
+        width: 280px !important;
+        max-width: none !important;
+    }
+    .col h3 {
+        font-size: 1.2rem;
+    }
+    .col p {
+        font-size: 0.85rem;
+    }
+}
+
+/* ========== 手机 ========== */
+@media (max-width: 768px) {
+    .page-2-solid {
+        padding: 30px 12px;
+    }
+    .top-area {
+        margin-bottom: 25px;
+    }
+    .title-2-main {
+        font-size: 1.44rem;
+        margin-bottom: 5px;
+    }
+    .title-2-sub {
+        font-size: 0.96rem;
+        letter-spacing: 2px;
+        margin-bottom: 0;
+    }
+    .three-cols {
+        gap: 1rem;
+        flex-direction: column;
+    }
+    .col {
+        padding: 8px;
+    }
+    .col img {
+        width: 240px !important;
+        margin-bottom: 0.8rem;
+    }
+    .col h3 {
+        font-size: 0.96rem;
+        margin-bottom: 0.4rem;
+    }
+    .col p {
+        font-size: 0.68rem;
+        line-height: 1.3;
+        margin-bottom: 0.4rem;
+    }
+    .ref-link {
+        margin-top: 0.4rem;
+        font-size: 0.52rem;
+    }
+}
+
+/* ========== 大显示器适配（24寸及以上，≥1920px） ========== */
+@media (min-width: 1920px) {
+    .page-2-solid {
+        padding: 80px 32px;
+    }
+    .container-2 {
+        max-width: 1600px;
+    }
+    .title-2-main {
+        font-size: 3.5rem;
+        margin-bottom: 15px;
+    }
+    .title-2-sub {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    .three-cols {
+        gap: 2.5rem;
+    }
+    .col {
+        padding: 24px;
+    }
+    .col img {
+        max-width: 350px;
+    }
+    .col h3 {
+        font-size: 1.6rem;
+    }
+    .col p {
+        font-size: 1rem;
+    }
+    .ref-link {
+        font-size: 0.85rem;
+    }
+}
+/* ========== 第3面 ========== */
+.page-3 .text-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+}
+
+/* 内容容器：电脑和平板 55%，手机 60% */
+.content-3 {
+    width: 55%;
+    text-align: center;
+    margin-left: 0;
+    margin-right: auto;
+    padding: 0;
+}
+
+.asset-4-3 {
+    width: 80%;
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto 1.5rem auto;
+    display: block;
+}
+
+.desc-3 {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    /* 删除了 font-family，使用全局字体 */
+}
+
+.btn-overseer-3 {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.btn-overseer-3:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ========== 平板：内部元素缩小 15% ========== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .desc-3 {
+        font-size: 1.02rem;
+    }
+    .btn-overseer-3 {
+        padding: 0.85rem 1.7rem;
+        font-size: 0.85rem;
+    }
+    .asset-4-3 {
+        width: 68%;
+        margin-bottom: 1.28rem;
+    }
+}
+
+/* ========== 手机：宽度 60%，字体再缩小 ========== */
+@media (max-width: 768px) {
+    .page-3 .text-overlay {
+        padding: 0 4%;
+    }
+    .content-3 {
+        width: 60%;
+    }
+    .asset-4-3 {
+        width: 40%;
+        margin-bottom: 0.7rem;
+    }
+    .desc-3 {
+        font-size: 0.5rem;
+        margin-bottom: 0.8rem;
+    }
+    .btn-overseer-3 {
+        padding: 0.45rem 0.9rem;
+        font-size: 0.5rem;
+    }
+}
+
+/* ========== 大显示器适配（24寸及以上，≥1920px） ========== */
+@media (min-width: 1920px) {
+    .content-3 {
+        width: 50%;
+    }
+    .asset-4-3 {
+        max-width: 180px;
+    }
+    .desc-3 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .btn-overseer-3 {
+        padding: 1.2rem 2.5rem;
+        font-size: 1.2rem;
+    }
+}
+
+/* ========== 第4面 ========== */
+.page-4 {
+    position: relative;
+    width: 100%;
+}
+
+.page-4-bg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.grid-container {
+    position: absolute;
+    top: 28%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 44%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.grid-row {
+    display: flex;
+    justify-content: center;
+    gap: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+
+.row-top {
+    margin-bottom: 0.3rem;
+}
+
+.row-bottom {
+    margin-bottom: 0;
+}
+
+.grid-item {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.grid-item:hover {
+    transform: scale(1.02);
+}
+
+.square {
+    aspect-ratio: 1 / 1;
+    flex: 1;
+}
+
+.rectangle {
+    aspect-ratio: 1.6 / 1;
+    flex: 1.6;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.grid-item span {
+    position: absolute;
+    bottom: 6px;
+    left: 8px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    background: transparent;
+    z-index: 2;
+    white-space: nowrap;
+    /* 删除了 font-family，使用全局字体 */
+}
+
+/* ========== 平板 ========== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .grid-container {
+        max-width: 48%;
+        top: 25%;
+    }
+    .grid-row {
+        gap: 0.25rem;
+        margin-bottom: 0.25rem;
+    }
+    .grid-item span {
+        font-size: 0.6rem;
+    }
+}
+
+/* ========== 手机：横排，无黑底，缩小10%，整体下移 ========== */
+@media (max-width: 768px) {
+    .page-4-bg {
+        display: block;
+    }
+    
+    .grid-container {
+        position: absolute;
+        top: 35%;
+        max-width: 44%;
+        padding: 0;
+        background: transparent;
+        margin: 0 auto;
+    }
+    
+    .grid-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 0.13rem;
+        margin-bottom: 0.13rem;
+    }
+    
+    .square {
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .rectangle {
+        flex: 1.6;
+        min-width: 0;
+    }
+    
+    .grid-item span {
+        font-size: 0.29rem;
+        bottom: 3px;
+        left: 4px;
+        white-space: nowrap;
+    }
+}
+
+/* 超小手机 */
+@media (max-width: 480px) {
+    .grid-container {
+        top: 30%;
+        max-width: 50%;
+    }
+    .grid-item span {
+        font-size: 0.26rem;
+    }
+}
+
+/* ========== 大显示器适配（24寸及以上，≥1920px） ========== */
+@media (min-width: 1920px) {
+    .grid-container {
+        max-width: 35%;
+        top: 25%;
+    }
+    .grid-row {
+        gap: 0.5rem;
+    }
+    .grid-item span {
+        font-size: 0.85rem;
+        bottom: 10px;
+        left: 12px;
+    }
+}
+
+/* ========== 第5面 ========== */
+.page-5 {
+    position: relative;
+}
+
+.page-5 .text-overlay {
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    width: 50%;
+    padding-left: 8%;
+}
+
+.title-5 {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    /* 删除了 font-family，使用全局字体 */
+}
+
+.subtitle-5 {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    /* 删除了 font-family，使用全局字体 */
+}
+
+.desc-5 {
+    font-size: clamp(0.9rem, 2.2vw, 1rem);
+    line-height: 1.5;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    /* 删除了 font-family，使用全局字体 */
+}
+
+/* ========== 平板 ========== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .page-5 .text-overlay {
+        width: 50%;
+        padding-left: 6%;
+    }
+    .title-5 {
+        font-size: 1.5rem;
+    }
+    .subtitle-5 {
+        font-size: 1rem;
+    }
+    .desc-5 {
+        font-size: 0.75rem;
+    }
+}
+
+/* ========== 手机 ========== */
+@media (max-width: 768px) {
+    .page-5 .text-overlay {
+        width: 50%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .title-5 {
+        font-size: 0.97rem;
+        margin-bottom: 0.18rem;
+    }
+    .subtitle-5 {
+        font-size: 0.65rem;
+        margin-bottom: 0.27rem;
+    }
+    .desc-5 {
+        font-size: 0.49rem;
+        margin-bottom: 0.27rem;
+        line-height: 1.3;
+    }
+}
+
+/* ========== 大显示器适配（≥1440px） ========== */
+@media (min-width: 1440px) {
+    .page-5 .text-overlay {
+        width: 45%;
+        padding-left: 10%;
+    }
+    .title-5 {
+        font-size: 2.5rem;
+        margin-bottom: 0.8rem;
+    }
+    .subtitle-5 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    .desc-5 {
+        font-size: 1.5rem;
+        line-height: 1.6;
+        margin-bottom: 1.2rem;
+    }
+}
+/* ========== 第6面 ========== */
+.page-6 {
+    position: relative;
+    width: 100%;
+}
+
+.page-6 .bg-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.split-layout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+/* 左边栏：底部对齐 */
+.col-left {
+    width: 45%;
+    text-align: left;
+    align-self: flex-end;
+}
+
+/* 右边栏：垂直居中 */
+.col-right {
+    width: 45%;
+    text-align: left;
+}
+
+/* 字体 - 删除了 font-family，使用全局字体 */
+.col-left h2,
+.col-left h3,
+.col-left p,
+.col-right h3,
+.col-right li,
+.col-right p {
+    color: #ffffff;
+}
+
+/* ========== 电脑端 ========== */
+.col-left h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem; line-height: 1.2; }
+.col-left h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.8rem; }
+.col-left p { font-size: 0.85rem; line-height: 1.5; }
+
+.col-right h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.8rem; }
+.col-right li { font-size: 0.85rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.col-right p { font-size: 0.85rem; line-height: 1.5; margin: 0; }
+.col-right .health-data-system { margin-top: 1.5rem; }
+
+/* ========== 平板：缩小30% ========== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .col-left h2 { font-size: 1.26rem; }
+    .col-left h3 { font-size: 0.77rem; }
+    .col-left p { font-size: 0.6rem; }
+    
+    .col-right h3 { font-size: 0.84rem; }
+    .col-right li { font-size: 0.6rem; }
+    .col-right p { font-size: 0.6rem; }
+    .col-right .health-data-system { margin-top: 1.05rem; }
+}
+
+/* ========== 手机：缩小50%，间距密 ========== */
+@media (max-width: 768px) {
+    .split-layout {
+        padding: 3%;
+    }
+    .col-left h2 { font-size: 0.9rem; margin-bottom: 0.2rem; }
+    .col-left h3 { font-size: 0.55rem; margin-bottom: 0.2rem; }
+    .col-left p { font-size: 0.43rem; line-height: 1.2; }
+    
+    .col-right h3 { font-size: 0.6rem; margin-bottom: 0.15rem; }
+    .col-right li { font-size: 0.43rem; margin-bottom: 0.05rem; line-height: 1.2; }
+    .col-right p { font-size: 0.43rem; margin: 0; line-height: 1.2; }
+    .col-right .health-data-system { margin-top: 0.2rem; }
+}
+
+/* ========== 大显示器适配（≥1440px） ========== */
+@media (min-width: 1440px) {
+    .split-layout {
+        padding: 5% 8%;
+    }
+    /* 左边 */
+    .col-left h2 { font-size: 2.2rem; }
+    .col-left h3 { font-size: 1.3rem; }
+    .col-left p { font-size: 1rem; }
+    
+    /* 右边 - 加大 */
+    .col-right h3 { 
+        font-size: 1.9rem;        /* 1.5 → 1.6 */
+        margin-bottom: 1rem;
+    }
+    .col-right li { 
+        font-size: 1.3rem;        /* 1.0 → 1.1 */
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+    }
+    .col-right p { 
+        font-size: 1.3rem;        /* 1.0 → 1.1 */
+        line-height: 1.6;
+    }
+    .col-right .health-data-system { 
+        margin-top: 2rem;
+    }
+}
+/* ========== 第7面 ========== */
+.page-7 {
+    position: relative;
+}
+
+.page-7 .text-overlay {
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    width: 55%;
+    padding-left: 8%;
+}
+
+.title-7 {
+    font-size: clamp(1.3rem, 3.5vw, 2rem);
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    /* 删除了 font-family */
+}
+
+.subtitle-7 {
+    font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.8rem;
+    /* 删除了 font-family */
+}
+
+.desc-7 {
+    font-size: clamp(0.8rem, 1.8vw, 0.95rem);
+    line-height: 1.5;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    /* 删除了 font-family */
+}
+
+.features-7 {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    flex-wrap: nowrap;
+}
+
+.feature-7 {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+}
+
+.feature-7 img {
+    width: 70px;
+    height: auto;
+    margin-bottom: 0.8rem;
+}
+
+.feature-7 h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.3rem;
+    /* 删除了 font-family */
+}
+
+.feature-7 p {
+    font-size: 0.75rem;
+    line-height: 1.3;
+    color: #ffffff;
+    /* 删除了 font-family */
+}
+
+/* ========== 平板 ========== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .page-7 .text-overlay {
+        width: 60%;
+        padding-left: 6%;
+    }
+    .features-7 {
+        gap: 0.15rem;
+    }
+    .feature-7 img {
+        width: 45px;
+    }
+    .feature-7 h4 {
+        font-size: 0.75rem;
+        white-space: normal;
+        word-break: break-word;
+        line-height: 1.2;
+    }
+    .feature-7 p {
+        font-size: 0.6rem;
+        white-space: normal;
+        word-break: break-word;
+        line-height: 1.2;
+    }
+    .title-7 {
+        font-size: 1.4rem;
+    }
+    .subtitle-7 {
+        font-size: 0.85rem;
+    }
+}
+
+/* ========== 手机 ========== */
+@media (max-width: 768px) {
+    .page-7 .text-overlay {
+        width: 60%;
+        padding-left: 5%;
+        padding-right: 0;
+    }
+    .title-7 {
+        font-size: 0.72rem;
+        margin-bottom: 0.2rem;
+    }
+    .subtitle-7 {
+        font-size: 0.44rem;
+        margin-bottom: 0.15rem;
+    }
+    .desc-7 {
+        font-size: 0.4rem;
+        margin-bottom: 0.4rem;
+    }
+    .features-7 {
+        gap: 0.08rem;
+    }
+    .feature-7 img {
+        width: 22px;
+        margin-bottom: 0.15rem;
+    }
+    .feature-7 h4 {
+        font-size: 0.4rem;
+        margin-bottom: 0.1rem;
+    }
+    .feature-7 p {
+        font-size: 0.32rem;
+        line-height: 1.1;
+    }
+}
+
+/* ========== 大显示器适配（≥1440px） ========== */
+@media (min-width: 1440px) {
+    .page-7 .text-overlay {
+        width: 50%;
+        padding-left: 10%;
+    }
+    .title-7 {
+        font-size: 2.5rem;
+        margin-bottom: 0.8rem;
+    }
+    .subtitle-7 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .desc-7 {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    .features-7 {
+        gap: 1.5rem;
+    }
+    .feature-7 img {
+        width: 90px;
+        margin-bottom: 1rem;
+    }
+    .feature-7 h4 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .feature-7 p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+}
+/* ========== 第8面 ========== */
+.page-8 {
+    position: relative;
+    width: 100%;
+}
+
+.page-8 .bg-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.split-layout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+/* 左下角 */
+.bottom-left {
+    width: 45%;
+    text-align: left;
+    align-self: flex-end;
+}
+
+.bottom-left h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    font-family: 'Montserrat', 'Trebuchet MS', 'Arial Black', sans-serif;
+}
+
+.bottom-left p {
+    font-size: 0.94rem;
+    line-height: 1.5;
+    color: #ffffff;
+  }
+
+/* 右边内容 */
+.right-content {
+    width: 45%;
+    text-align: left;
+    align-self: center;
+}
+
+.right-content h3 {
+    font-size: 1.32rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    /* 删除了 font-family */
+}
+
+/* 三个技术横排 */
+.technologies {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: nowrap;
+}
+
+.tech-item {
+    flex: 1;
+    text-align: center;
+}
+
+.tech-item img {
+    width: 66px;
+    height: auto;
+    margin-bottom: 0.8rem;
+}
+
+.tech-item h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.3rem;
+    /* 删除了 font-family */
+}
+
+.tech-item p {
+    font-size: 0.77rem;
+    line-height: 1.3;
+    color: #ffffff;
+    /* 删除了 font-family */
+}
+
+/* Benefits 列表 */
+.benefits h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    /* 删除了 font-family */
+}
+
+.benefits ul {
+    list-style: disc;
+    padding-left: 1.2rem;
+}
+
+.benefits li {
+    font-size: 0.83rem;
+    line-height: 1.4;
+    color: #ffffff;
+    margin-bottom: 0.3rem;
+    /* 删除了 font-family */
+}
+
+/* ========== 平板 ========== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .split-layout { padding: 4%; }
+    .bottom-left h2 { font-size: 1.8rem; margin-bottom: 0.3rem; }
+    .bottom-left p { font-size: 0.85rem; line-height: 1.4; }
+    .right-content h3 { font-size: 1.2rem; margin-bottom: 0.6rem; }
+    .technologies { gap: 0.6rem; margin-bottom: 1rem; }
+    .tech-item img { width: 55px; margin-bottom: 0.5rem; }
+    .tech-item h4 { font-size: 0.9rem; margin-bottom: 0.2rem; }
+    .tech-item p { font-size: 0.7rem; line-height: 1.2; }
+    .benefits h3 { font-size: 1rem; margin-bottom: 0.3rem; }
+    .benefits li { font-size: 0.7rem; margin-bottom: 0.2rem; }
+}
+
+/* ========== 手机 ========== */
+@media (max-width: 768px) {
+    .split-layout { padding: 4%; }
+    .bottom-left { width: 45%; align-self: flex-end; }
+    .right-content { width: 45%; align-self: center; }
+    .bottom-left h2 { font-size: 0.86rem; margin-bottom: 0.17rem; }
+    .bottom-left p { font-size: 0.48rem; line-height: 1.3; }
+    .right-content h3 { font-size: 0.65rem; margin-bottom: 0.25rem; }
+    .technologies { gap: 0.2rem; margin-bottom: 0.08rem; }
+    .tech-item img { width: 26px; margin-bottom: 0.2rem; }
+    .tech-item h4 { font-size: 0.43rem; margin-bottom: 0.03rem; }
+    .tech-item p { font-size: 0.36rem; line-height: 1.2; margin-bottom: 0; }
+    .benefits { margin-top: 0.05rem; }
+    .benefits h3 { font-size: 0.56rem; margin-bottom: 0.05rem; }
+    .benefits li { font-size: 0.41rem; margin-bottom: 0.02rem; line-height: 1.2; }
+}
+
+/* ========== 大显示器适配（≥1440px） ========== */
+@media (min-width: 1440px) {
+    .split-layout { padding: 5% 8%; }
+    .bottom-left h2 { font-size: 2.8rem; margin-bottom: 0.8rem; }
+    .bottom-left p { font-size: 1.2rem; line-height: 1.6; }
+    .right-content h3 { font-size: 1.8rem; margin-bottom: 1.5rem; }
+    .technologies { gap: 2rem; margin-bottom: 2.5rem; }
+    .tech-item img { width: 100px; margin-bottom: 1rem; }
+    .tech-item h4 { font-size: 1.3rem; margin-bottom: 0.8rem; }
+    .tech-item p { font-size: 1rem; line-height: 1.5; }
+    .benefits h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+    .benefits li { font-size: 1.1rem; margin-bottom: 0.5rem; }
+}
+
+/* 强制第8面左下角字体 */
+.page-8 .bottom-left p {
+    font-family: 'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+.page-8 .bottom-left h2 {
+    font-family: 'Montserrat', 'Trebuchet MS', 'Arial Black', sans-serif !important;
+}
+/* ========== 第9面 ========== */
+.page-9 {
+    position: relative;
+}
+
+.page-9 .text-overlay {
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    width: 60%;
+    margin-left: 40%;
+    padding-right: 8%;
+    padding-left: 5%;
+}
+
+.page-9 .text-content {
+    width: 100%;
+}
+
+.page-9 h2 {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    /* 删除了 font-family */
+}
+
+.page-9 h3 {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    /* 删除了 font-family */
+}
+
+.page-9 p {
+    font-size: clamp(0.8rem, 2vw, 0.95rem);
+    line-height: 1.5;
+    color: #ffffff;
+    /* 删除了 font-family */
+}
+
+/* ========== 平板 ========== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .page-9 .text-overlay {
+        width: 60%;
+        margin-left: 40%;
+        padding-right: 6%;
+        padding-left: 4%;
+    }
+    .page-9 h2 {
+        font-size: 1.6rem;
+    }
+    .page-9 h3 {
+        font-size: 1rem;
+    }
+    .page-9 p {
+        font-size: 0.8rem;
+    }
+}
+
+/* ========== 手机 ========== */
+@media (max-width: 768px) {
+    .page-9 .text-overlay {
+        width: 60%;
+        margin-left: 40%;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+    .page-9 h2 {
+        font-size: 1.1rem;
+    }
+    .page-9 h3 {
+        font-size: 0.7rem;
+        margin-bottom: 0.5rem;
+    }
+    .page-9 p {
+        font-size: 0.55rem;
+    }
+}
+
+/* ========== 大显示器适配（≥1440px） ========== */
+@media (min-width: 1440px) {
+    .page-9 .text-overlay {
+        width: 45%;              /* 60% → 45%，收窄 */
+        margin-left: 50%;        /* 40% → 50%，往右移 */
+        padding-right: 8%;
+        padding-left: 5%;
+    }
+    .page-9 h2 {
+        font-size: 2.5rem;
+        margin-bottom: 0.8rem;
+    }
+    .page-9 h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.2rem;
+    }
+    .page-9 p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
+/* ========== 第11面 ========== */
+.page-11 {
+    position: relative;
+}
+
+.page-11 .text-overlay {
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    width: 45%;
+    margin-left: 0;
+    padding-left: 8%;
+    padding-right: 5%;
+}
+
+.page-11 .text-content {
+    width: 100%;
+}
+
+.page-11 h2 {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    /* 删除了 font-family */
+}
+
+.page-11 p {
+    font-size: clamp(0.85rem, 2.2vw, 1rem);
+    line-height: 1.6;
+    color: #ffffff;
+    /* 删除了 font-family */
+}
+
+/* ========== 平板 ========== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .page-11 .text-overlay {
+        width: 45%;
+        padding-left: 6%;
+        padding-right: 4%;
+    }
+    .page-11 h2 {
+        font-size: 1.6rem;
+    }
+    .page-11 p {
+        font-size: 0.85rem;
+    }
+}
+
+/* ========== 手机 ========== */
+@media (max-width: 768px) {
+    .page-11 .text-overlay {
+        width: 45%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .page-11 h2 {
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+    }
+    .page-11 p {
+        font-size: 0.55rem;
+        line-height: 1.3;
+    }
+}
+
+/* ========== 大显示器适配（≥1440px） ========== */
+@media (min-width: 1440px) {
+    .page-11 .text-overlay {
+        width: 40%;
+        padding-left: 10%;
+    }
+    .page-11 h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1.2rem;
+    }
+    .page-11 p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+}
+
+/* ========== 第12面：深紫色纯色背景 ========== */
+.page-12-solid {
+    background-color: #4a1d55;
+    width: 100%;
+    padding: 60px 24px;
+}
+
+.container-12 {
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title-12 {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    /* 删除了 font-family */
+}
+
+/* 两列横排 */
+.two-cols-12 {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: nowrap;
+}
+
+.col-12 {
+    flex: 1;
+    text-align: center;
+}
+
+/* 图标大小同第2面 */
+.col-12 img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+/* 删除了 h3 样式，只保留 p */
+.col-12 p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #ffffff;
+    max-width: 90%;
+    margin: 0 auto;
+    /* 删除了 font-family */
+}
+
+/* ========== 平板 ========== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .page-12-solid {
+        padding: 50px 20px;
+    }
+    .two-cols-12 {
+        gap: 1.5rem;
+    }
+    .col-12 img {
+        max-width: 240px;
+    }
+    .col-12 p {
+        font-size: 0.75rem;
+    }
+    .title-12 {
+        font-size: 1.6rem;
+    }
+}
+
+/* ========== 手机 ========== */
+@media (max-width: 768px) {
+    .page-12-solid {
+        padding: 40px 16px;
+    }
+    .two-cols-12 {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .col-12 img {
+        max-width: 200px;
+        margin: 0 auto 1rem auto;
+    }
+    .col-12 p {
+        font-size: 0.7rem;
+    }
+    .title-12 {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* ========== 大显示器适配（≥1440px） ========== */
+@media (min-width: 1440px) {
+    .page-12-solid {
+        padding: 80px 32px;
+    }
+    .container-12 {
+        max-width: 1600px;
+    }
+    .title-12 {
+        font-size: 2.8rem;
+        margin-bottom: 2.5rem;
+    }
+    .two-cols-12 {
+        gap: 3rem;
+    }
+    .col-12 img {
+        max-width: 350px;
+    }
+    .col-12 p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
+/* ========== 第13面 ========== */
+.page-13 {
+    position: relative;
+    width: 100%;
+}
+
+.page-13 .bg-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.split-layout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+/* 左边 - 左下角 */
+.bottom-left {
+    width: 45%;
+    text-align: left;
+    align-self: flex-end;
+}
+
+.bottom-left h2 {
+    font-size: 2.16rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 0.6rem;
+    /* 删除了 font-family */
+}
+
+.bottom-left h3 {
+    font-size: 1.32rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.96rem;
+    /* 删除了 font-family */
+}
+
+.bottom-left p {
+    font-size: 1.02rem;
+    line-height: 1.5;
+    color: #ffffff;
+    margin-bottom: 0.96rem;
+    /* 删除了 font-family */
+}
+
+/* 右边内容 */
+.right-content {
+    width: 45%;
+    text-align: left;
+    align-self: center;
+}
+
+.feature-group {
+    margin-bottom: 1.8rem;
+}
+
+.feature-group h3 {
+    font-size: 1.32rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.6rem;
+    /* 删除了 font-family */
+}
+
+.feature-group li {
+    font-size: 0.96rem;
+    line-height: 1.4;
+    color: #ffffff;
+    margin-bottom: 0.36rem;
+    /* 删除了 font-family */
+}
+
+.zero-desc {
+    font-size: 0.96rem;
+    color: #ffffff;
+    margin-bottom: 0.36rem;
+    /* 删除了 font-family */
+}
+
+.neck-chain {
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 0.6rem;
+    /* 删除了 font-family */
+}
+
+/* ========== 平板 ========== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .split-layout { padding: 4%; }
+    .bottom-left h2 { font-size: 1.4rem; }
+    .bottom-left h3 { font-size: 0.9rem; }
+    .bottom-left p { font-size: 0.7rem; }
+    .feature-group h3 { font-size: 0.9rem; }
+    .feature-group li { font-size: 0.7rem; }
+    .zero-desc { font-size: 0.7rem; }
+    .neck-chain { font-size: 0.75rem; }
+}
+
+/* ========== 手机 ========== */
+@media (max-width: 768px) {
+    .split-layout { padding: 3%; }
+    .bottom-left h2 { font-size: 0.77rem; margin-bottom: 0.1rem; }
+    .bottom-left h3 { font-size: 0.54rem; margin-bottom: 0.15rem; }
+    .bottom-left p { font-size: 0.42rem; margin-bottom: 0.15rem; line-height: 1.2; }
+    .feature-group { margin-bottom: 0.4rem; }
+    .feature-group h3 { font-size: 0.54rem; margin-bottom: 0.1rem; }
+    .feature-group li { font-size: 0.385rem; margin-bottom: 0.07rem; line-height: 1.2; }
+    .zero-desc { font-size: 0.385rem; margin-bottom: 0.07rem; }
+    .neck-chain { font-size: 0.42rem; margin-top: 0.15rem; }
+}
+
+/* ========== 大显示器适配（≥1440px） ========== */
+@media (min-width: 1440px) {
+    .split-layout { padding: 5% 8%; }
+    .bottom-left { width: 40%; }
+    .right-content { width: 40%; }
+    .bottom-left h2 { font-size: 2.8rem; margin-bottom: 0.8rem; }
+    .bottom-left h3 { font-size: 1.6rem; margin-bottom: 1rem; }
+    .bottom-left p { font-size: 1.2rem; line-height: 1.6; }
+    .feature-group h3 { font-size: 1.6rem; margin-bottom: 0.8rem; }
+    .feature-group li { font-size: 1rem; margin-bottom: 0.5rem; }
+    .zero-desc { font-size: 1rem; }
+    .neck-chain { font-size: 1.2rem; margin-top: 0.8rem; }
+}
+/* ========== 第14面 ========== */
+.page-14 {
+    position: relative;
+}
+
+.page-14 .text-overlay {
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    width: 50%;
+    margin-left: 0;
+    padding-top: 30%;
+    padding-left: 8%;
+    padding-right: 5%;
+}
+
+.page-14 h2 {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    /* 删除了 font-family */
+}
+
+.page-14 p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    line-height: 1.6;
+    color: #ffffff;
+    /* 删除了 font-family */
+}
+
+/* ========== 平板 ========== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .page-14 .text-overlay {
+        width: 50%;
+        padding-top: 30%;
+        padding-left: 6%;
+    }
+    .page-14 h2 {
+        font-size: 1.8rem;
+    }
+    .page-14 p {
+        font-size: 0.95rem;
+    }
+}
+
+/* ========== 手机 ========== */
+@media (max-width: 768px) {
+    .page-14 .text-overlay {
+        width: 55%;
+        padding-top: 30%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .page-14 h2 {
+        font-size: 0.88rem;
+        margin-bottom: 0.4rem;
+    }
+    .page-14 p {
+        font-size: 0.56rem;
+        line-height: 1.4;
+    }
+}
+
+/* ========== 第14面 ========== */
+.page-14 {
+    position: relative;
+}
+
+.page-14 .text-overlay {
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    width: 50%;
+    margin-left: 0;
+    padding-top: 35%;           /* 30% → 35%，往下移动 */
+    padding-left: 8%;
+    padding-right: 5%;
+}
+
+.page-14 h2 {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;        /* 增加字间距 */
+}
+
+.page-14 p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    line-height: 1.8;           /* 1.6 → 1.8，行距加大 */
+    color: #ffffff;
+    letter-spacing: 0.5px;      /* 增加字间距 */
+}
+
+/* ========== 平板 ========== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .page-14 .text-overlay {
+        width: 50%;
+        padding-top: 35%;
+        padding-left: 6%;
+    }
+    .page-14 h2 {
+        font-size: 1.8rem;
+    }
+    .page-14 p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+}
+
+/* ========== 手机 ========== */
+@media (max-width: 768px) {
+    .page-14 .text-overlay {
+        width: 55%;
+        padding-top: 35%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .page-14 h2 {
+        font-size: 0.88rem;
+        margin-bottom: 0.4rem;
+    }
+    .page-14 p {
+        font-size: 0.56rem;
+        line-height: 1.5;
+    }
+}
+
+/* ========== 大显示器适配（≥1440px） ========== */
+@media (min-width: 1440px) {
+    .page-14 .text-overlay {
+        width: 45%;
+        padding-top: 30%;
+        padding-left: 10%;
+    }
+    .page-14 h2 {
+        font-size: 3rem;
+        margin-bottom: 1.2rem;
+        letter-spacing: 2px;
+    }
+    .page-14 p {
+        font-size: 1.2rem;
+        line-height: 1.9;
+        letter-spacing: 1px;
+    }
+}
+
+/* ========== 第15面：深紫色纯色背景 ========== */
+.page-15-solid {
+    background-color: #4a1d55;
+    width: 100%;
+    padding: 60px 24px;
+}
+
+.container-15 {
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title-15 {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    /* 删除了 font-family */
+}
+
+/* 电脑：横排4个，固定缝隙4px */
+.features-grid-15 {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.feature-item-15 {
+    width: 220px;
+    text-align: center;
+}
+
+.feature-item-15 img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.feature-item-15 span {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #ffffff;
+    /* 删除了 font-family */
+}
+
+/* ========== 平板 ========== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .page-15-solid {
+        padding: 50px 20px;
+    }
+    .features-grid-15 {
+        gap: 4px;
+    }
+    .feature-item-15 {
+        width: 190px;
+    }
+    .feature-item-15 img {
+        max-width: 170px;
+    }
+    .feature-item-15 span {
+        font-size: 0.8rem;
+    }
+    .title-15 {
+        font-size: 1.6rem;
+    }
+}
+
+/* ========== 手机：两行，每行两个 ========== */
+@media (max-width: 768px) {
+    .page-15-solid {
+        padding: 40px 16px;
+    }
+    .features-grid-15 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px;
+    }
+    .feature-item-15 {
+        width: 160px;
+    }
+    .feature-item-15 img {
+        max-width: 140px;
+    }
+    .feature-item-15 span {
+        font-size: 0.7rem;
+    }
+    .title-15 {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* ========== 大显示器适配（≥1440px） ========== */
+@media (min-width: 1440px) {
+    .page-15-solid {
+        padding: 80px 32px;
+    }
+    .container-15 {
+        max-width: 1600px;
+    }
+    .title-15 {
+        font-size: 2.8rem;
+        margin-bottom: 2.5rem;
+    }
+    .features-grid-15 {
+        gap: 8px;
+    }
+    .feature-item-15 {
+        width: 280px;
+    }
+    .feature-item-15 img {
+        max-width: 250px;
+    }
+    .feature-item-15 span {
+        font-size: 1.1rem;
+    }
+}

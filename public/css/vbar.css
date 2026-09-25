@@ -1,0 +1,81 @@
+/* --- Vertical bar styles: thin rail + thicker runner --- */
+.vbar-track {
+  position: relative;
+  padding-left: 28px;
+
+  /* knobs */
+  --bar-width-base: 1px;
+  --bar-width-highlight: 2px;
+  --bar-pad: 10px;
+  --bar-highlight-h: 96px;
+  --bar-offset: 0px; /* JS updates this */
+
+  --vbar-base: rgba(255, 255, 255, 0.35);
+  --vbar-highlight: rgba(255, 255, 255, 0.6);
+  --vbar-base-dark: rgba(0, 0, 0, 0.28);
+  --vbar-highlight-dark: rgba(0, 0, 0, 0.45);
+}
+
+/* Base rail (thin) */
+.vbar-track::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: var(--bar-pad);
+  bottom: var(--bar-pad);
+  width: var(--bar-width-base);
+  background: var(--vbar-base);
+}
+
+/* Moving runner (thick, non-shiny) */
+.vbar-track::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: var(--bar-pad);
+  width: var(--bar-width-highlight);
+  height: var(--bar-highlight-h);
+  background: var(--vbar-highlight);
+
+  /* GPU-friendly movement; default: no transition */
+  transform: translate3d(0, var(--bar-offset), 0);
+  transition: none;
+}
+
+/* Dark variant (no glow) */
+.vbar-dark::before {
+  background: var(--vbar-base-dark);
+}
+.vbar-dark::after {
+  background: var(--vbar-highlight-dark);
+}
+
+/* Only add transition & will-change while running */
+.vbar-track.vbar-running::after {
+  transition: transform 1.2s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: transform;
+}
+
+/* Blink after completion (subtle, no glow) */
+.vbar-track.vbar-active::after {
+  animation: vbarBlink 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes vbarBlink {
+  from {
+    opacity: 0.45;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Respect reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .vbar-track.vbar-running::after {
+    transition: none !important;
+  }
+  .vbar-track.vbar-active::after {
+    animation: none !important;
+  }
+}

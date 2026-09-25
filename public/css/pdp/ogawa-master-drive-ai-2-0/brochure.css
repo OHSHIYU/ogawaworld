@@ -1,0 +1,158 @@
+/* --- Global --- */
+:root {
+  /* colours */
+  --darker-blue: #000f25;
+  --dark-blue: #13123d;
+  --blue: #456393;
+  --bright-blue: #1c75bc;
+  --white-color: #ffffff;
+
+  /* font weight */
+  --light: 200;
+  --regular: 500;
+  --bold: 700;
+}
+.main {
+  font-family:
+    "NotoSansCJKtc",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans CJK TC",
+    "Microsoft JhengHei",
+    "PingFang TC",
+    "Heiti TC",
+    sans-serif;
+}
+.main h1,
+.main h2,
+.main h3 {
+  font-family: "Orbitron", sans-serif;
+  color: var(--white-color);
+}
+.main p {
+  font-family: "Gothic";
+  font-weight: var(--light);
+}
+.main hr {
+  opacity: 1;
+}
+.section-heading {
+  font-weight: var(--bold);
+}
+.hr-blue {
+  color: var(--darker-blue);
+}
+.hr-white {
+  color: var(--white-color);
+}
+.card-bg {
+  padding: 2rem;
+  color: var(--white-color);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  background: linear-gradient(100deg, var(--blue) 0%, var(--darker-blue) 100%);
+}
+.full-image-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--img-w, 3509) / var(--img-h, 2481);
+}
+.full-image-frame .overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 5% 0;
+  pointer-events: none;
+}
+
+/* circular badge */
+.circle-badge {
+  width: 45%;
+  height: auto;
+  justify-self: center;
+}
+
+/* --- Index friendly section --- */
+.index-section {
+  background-image: linear-gradient(var(--dark-blue), var(--darker-blue));
+  text-align: center;
+}
+.index-section p {
+  color: var(--white-color);
+}
+
+/* --- Section 6 --- */
+.s6-text {
+  --pos-top: 35%;
+  --pos-left: 10%;
+}
+
+/* --- Section 8 & 9 --- */
+.s8-item-title {
+  max-width: 38%;
+  --pos-left: 6%;
+}
+.s8-item-chi {
+  max-width: 10%;
+  --pos-bottom: 26%;
+  --pos-left: 6%;
+}
+.s8-item-eng {
+  max-width: 38%;
+  --pos-bottom: 10%;
+  --pos-left: 6%;
+}
+.s9-item-title {
+  max-width: 38%;
+  --pos-right: 6%;
+}
+.s9-item-chi {
+  max-width: 10%;
+  --pos-bottom: 25%;
+  --pos-right: 6%;
+}
+.s9-item-eng {
+  max-width: 38%;
+  --pos-bottom: 7%;
+  --pos-right: 6%;
+}
+
+/* --- Section 10 & Section 11 --- */
+.s10 .tile-label,
+.s11 .tile-label {
+  --pos-right: 30%;
+  --pos-bottom: 14%;
+  color: var(--white-color);
+}
+
+/* --- Section 14, 15, 16 --- */
+.s16-left {
+  width: 40%;
+}
+.s16-right {
+  width: 60%;
+}
+
+/* Responsive Layout Adjustments */
+@media (max-width: 991.98px) {
+}
+
+/* Small mobile devices (e.g., up to 575.98px) */
+@media (max-width: 575.98px) {
+  .card-bg {
+    padding: 1rem;
+  }
+}
+
+/* Tablets (e.g., 576px to 991.98px) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+}
+
+/* Desktops (e.g., 992px and up) */
+@media (min-width: 992px) {
+}

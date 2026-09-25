@@ -1,0 +1,204 @@
+/* --- Global --- */
+:root {
+  /* colours */
+  --blue-color: #b9e4ee;
+  --green-color: #7fc99f;
+  --white-color: #ffffff;
+
+  /* font family */
+  --poppins: "Poppins", sans-serif;
+  --mina: "Mina", sans-serif;
+  --myriad-pro: "Myriadpro", sans-serif;
+}
+.main {
+  font-family:
+    var(--poppins),
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans CJK TC",
+    "Microsoft JhengHei",
+    "PingFang TC",
+    "Heiti TC",
+    sans-serif;
+  color: var(--white-color);
+}
+.main h1,
+.main h3 {
+  font-family: var(--mina), sans-serif;
+  font-weight: 900;
+}
+.section-heading {
+  font-family: var(--mina);
+  font-weight: 900;
+}
+
+/* -----------------------------------
+   OVERLAY UTILITY SYSTEM (reusable)
+   ----------------------------------- */
+.full-image-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--img-w, 1241) / var(--img-h, 1754);
+}
+.full-image-frame .overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+  pointer-events: none;
+}
+
+/* ============================
+    Index friendly section
+   ============================ */
+.index-section {
+  background-image: linear-gradient(var(--blue-color), #102433);
+  text-align: center;
+}
+.index-section p {
+  color: var(--white-color);
+}
+
+/* ============================
+    Section 2
+   ============================ */
+.max-width-20 {
+  max-width: 20%;
+}
+.s2-item h3 {
+  color: var(--green-color);
+}
+.s2-item-busy {
+  --pos-top: 30%;
+  --pos-left: 20%;
+}
+.s2-item-active {
+  --pos-top: 35%;
+  --pos-right: 14%;
+}
+.s2-item-parents {
+  --pos-top: 49%;
+  --pos-left: 20%;
+}
+.s2-item-elderly {
+  --pos-top: 53%;
+  --pos-right: 14%;
+}
+.s2-item-sleep {
+  --pos-top: 67%;
+  --pos-left: 20%;
+}
+
+/* ============================
+    Section 4
+   ============================ */
+.s4-polaroid {
+  width: min(420px, 35vw);
+  background: #fff;
+  padding: 1rem 1rem 3rem;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.35);
+  transform-origin: center;
+}
+.s4-4_5-photo {
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),
+    var(--photo, none) center / cover no-repeat;
+}
+.s4-4_3-photo {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),
+    var(--photo, none) center / cover no-repeat;
+}
+.s4-caption {
+  margin-top: 0.6rem;
+  text-align: center;
+  font-weight: 800;
+  color: var(--green-color);
+}
+.s4-polaroid--ladies {
+  --pos-top: 22%;
+  --pos-left: 14%;
+  transform: rotate(-6deg);
+}
+.s4-polaroid--gents {
+  --pos-top: 36%;
+  --pos-left: 60%;
+  transform: rotate(6deg);
+}
+.s4-polaroid--swing {
+  --pos-top: 71%;
+  --pos-left: 22%;
+  transform: rotate(-2deg);
+}
+.s4-text-top {
+  --pos-top: 22%;
+  --pos-left: 50%;
+}
+.s4-text-middle {
+  --pos-top: 56%;
+  --pos-left: 15%;
+}
+.s4-text-bottom {
+  --pos-top: 78%;
+  --pos-left: 56%;
+}
+
+/* Responsive Layout Adjustments */
+@media (max-width: 991.98px) {
+}
+
+/* Small mobile devices (e.g., up to 575.98px) */
+@media (max-width: 575.98px) {
+  .max-width-20 {
+    max-width: 30%;
+  }
+  .s2-item h3 {
+    font-size: clamp(0.6rem, 1vw, 0.8rem);
+    margin-bottom: 0;
+  }
+  .s2-item p {
+    line-height: 0.7rem;
+  }
+  .s2-item-busy {
+    --pos-top: 28%;
+    --pos-left: 18%;
+  }
+  .s2-item-active {
+    --pos-top: 34%;
+    --pos-right: 10%;
+  }
+  .s2-item-parents {
+    --pos-top: 47%;
+    --pos-left: 18%;
+  }
+  .s2-item-elderly {
+    --pos-top: 51.5%;
+    --pos-right: 10%;
+  }
+  .s2-item-sleep {
+    --pos-top: 65%;
+    --pos-left: 18%;
+  }
+  .s4-polaroid {
+    width: min(420px, 30vw);
+    padding: 0.5rem 0.5rem 1rem;
+  }
+}
+
+/* Tablets (e.g., 576px to 991.98px) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+}
+
+/* Desktops (e.g., 992px and up) */
+@media (min-width: 992px) {
+}

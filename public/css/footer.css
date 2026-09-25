@@ -1,0 +1,169 @@
+.footer-contact {
+  padding: 40px 0;
+  border-top: 1px solid #eee;
+}
+.footer-contact h4 {
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.75rem;
+}
+
+#subscribe {
+  /* keep anchor jumps below sticky header */
+  scroll-margin-top: var(--nav-h);
+}
+
+/* Use flexible columns instead of fixed 350px widths */
+.footer-contact .f-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  align-items: start;
+  justify-items: stretch; /* left align content */
+}
+
+/* Tidy up rows/links */
+.f-row {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 12px;
+  margin: 6px 0;
+  font-size: 0.93rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+.f-muted {
+  color: var(--ogw-muted);
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin: 0.25rem 0 0.75rem;
+}
+
+.f-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.f-list li {
+  margin: 8px 0;
+  font-size: 0.93rem;
+  font-weight: 300;
+}
+.f-list a {
+  color: var(--ogw-fg);
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+.f-list a:hover {
+  opacity: 1;
+  color: var(--ogw-gold);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Subscribe layout: input + button on one line, checkbox below */
+.subscribe {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  grid-auto-flow: row;
+  column-gap: 8px;
+  row-gap: 8px;
+  max-width: 420px;
+  font-size: 0.93rem;
+}
+.subscribe input[type="email"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 300;
+  background: transparent;
+  color: var(--ogw-fg);
+}
+.btn-sub {
+  padding: 12px 16px;
+  background: #111;
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1;
+}
+.btn-sub:hover {
+  filter: brightness(1.05);
+}
+
+.chk {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--ogw-muted);
+  font-size: 0.9rem;
+  font-weight: 300;
+  grid-column: 1 / -1; /* span full width under the form row */
+}
+.chk input {
+  transform: translateY(1px);
+}
+
+/* ====== Breakpoints ====== */
+
+/* Large tablets: 2 columns, put Subscribe full-width */
+@media (max-width: 992px) {
+  .footer-contact .f-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .footer-contact .f-grid > div:last-child {
+    grid-column: 1 / -1; /* make subscribe row span both columns */
+    max-width: 720px;
+    width: 100%;
+    justify-self: stretch;
+  }
+  .f-row {
+    grid-template-columns: 80px 1fr;
+  }
+}
+
+/* Phones / small tablets: single column, stack neatly */
+@media (max-width: 600px) {
+  .footer-contact {
+    padding: 28px 0;
+  }
+  .footer-contact .f-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .f-row {
+    grid-template-columns: 70px 1fr;
+    font-size: 0.9rem;
+  }
+  .subscribe {
+    grid-template-columns: 1fr; /* stack input and button */
+    grid-template-rows: auto auto auto;
+    max-width: 100%;
+  }
+  .btn-sub {
+    width: 100%;
+  } /* big comfy tap target */
+}
+
+/* Very small screens */
+@media (max-width: 400px) {
+  .f-row {
+    grid-template-columns: 60px 1fr;
+  }
+}
+
+/* Dark mode polish (keeps your existing scheme consistent) */
+@media (prefers-color-scheme: dark) {
+  .footer-contact {
+    border-top-color: var(--ogw-border);
+  }
+  .subscribe input[type="email"] {
+    border-color: #333;
+  }
+}

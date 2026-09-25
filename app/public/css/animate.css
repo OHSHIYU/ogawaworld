@@ -1,0 +1,67 @@
+/* animate.css (updated) */
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+  }
+}
+
+/* Base reveal state (before visible) */
+[data-reveal] {
+  /* Slower + smoother defaults */
+  --reveal-duration: 900ms;
+  --reveal-ease: cubic-bezier(0.16, 0.84, 0.44, 1);
+  --reveal-delay: 0ms;
+
+  opacity: 0;
+  filter: blur(4px);
+  transform-origin: center center;
+  will-change: opacity, transform, filter;
+
+  transition: opacity var(--reveal-duration) var(--reveal-ease)
+      var(--reveal-delay),
+    transform var(--reveal-duration) var(--reveal-ease) var(--reveal-delay),
+    filter var(--reveal-duration) var(--reveal-ease) var(--reveal-delay);
+}
+
+/* When in view */
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+  filter: blur(0);
+}
+
+/* Variants – more distance to make it obvious */
+[data-reveal="fade-up"] {
+  transform: translateY(40px);
+}
+
+[data-reveal="fade-down"] {
+  transform: translateY(-40px);
+}
+
+[data-reveal="slide-left"] {
+  transform: translateX(50px);
+}
+
+[data-reveal="slide-right"] {
+  transform: translateX(-50px);
+}
+
+[data-reveal="zoom-in"] {
+  transform: translateY(20px) scale(0.9);
+}
+
+[data-reveal="blur-in"] {
+  filter: blur(10px);
+  transform: translateY(24px);
+}
+
+/* Stagger helpers – we set --reveal-delay inline from JS */
+[data-reveal][style*="--reveal-delay"] {
+  transition-delay: var(--reveal-delay);
+}

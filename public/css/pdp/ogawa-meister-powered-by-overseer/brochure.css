@@ -1,0 +1,315 @@
+:root {
+  /* colours */
+  --ink-midnight: #211d30;
+  --blue-royal: #004088;
+  --blue-indigo: #414c9f;
+  --blue-aqua: #80d0f4;
+  --cyan-electric: #29faff;
+  --blue-sky-soft: #80d3f6;
+  --blue-glacier-light: #c4e3ef;
+  --blue-card-bg: #225793;
+
+  /* font family */
+  --digital-serial: "Digital Serial", sans-serif;
+  --montserrat: "Montserrat", sans-serif;
+  --rubik: "Rubik", sans-serif;
+}
+.main {
+  font-family:
+    var(--rubik),
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans CJK TC",
+    "Microsoft JhengHei",
+    "PingFang TC",
+    "Heiti TC",
+    sans-serif;
+  color: #fff;
+}
+.main h1 {
+  font-family: var(--digital-serial);
+}
+.full-image-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--img-w, 3969) / var(--img-h, 1721);
+}
+.full-image-frame .overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3%;
+  pointer-events: none;
+}
+
+.blue-box {
+  background-color: #004088;
+  opacity: 0.7;
+  margin-top: 5%;
+}
+
+/* Headings */
+.section-title {
+  font-family: var(--digital-serial);
+}
+.section-subtitle {
+  font-family: var(--digital-serial);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Left-bottom captions over images / videos */
+.left-bottom-label {
+  position: absolute;
+  left: 0.7rem;
+  bottom: 0.6rem;
+  right: 0.7rem;
+  letter-spacing: 0.08em;
+  color: #fff;
+  text-transform: none;
+  line-height: 1.3;
+  text-shadow:
+    0 0 4px rgba(0, 0, 0, 0.85),
+    0 0 10px rgba(0, 0, 0, 0.9);
+  pointer-events: none;
+}
+
+/* --- Index friendly section --- */
+.index-section {
+  background-image: linear-gradient(
+    var(--blue-glacier-light),
+    var(--blue-card-bg)
+  );
+  text-align: center;
+}
+
+/* --- Left contents: Section 2 & 3 --- */
+.left-content .overlay {
+  padding-inline: min(8%, 6rem);
+}
+.left-title {
+  font-family: var(--digital-serial);
+}
+
+/* --- Section 4: Feature grid --- */
+.features-grid .overlay.features-overlay {
+  align-items: center;
+  justify-content: center;
+}
+.features-overlay h2 {
+  letter-spacing: 0.12em;
+  margin: 0;
+}
+.features-overlay p {
+  letter-spacing: 0.12em;
+  margin-bottom: 1rem;
+}
+.features-grid-inner {
+  width: min(900px, 80%);
+  aspect-ratio: 16 / 7; /* fixed collage ratio */
+  display: grid;
+  gap: 0.6rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "biosensor liflex liflex smart"
+    "ota   five whisper  ai";
+}
+.feature-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  text-decoration: none;
+}
+.feature-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.18),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.feature-card:hover::after,
+.feature-card:focus-visible::after {
+  opacity: 1;
+}
+.feature-card:hover,
+.feature-card:focus-visible {
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.7) inset,
+    0 0 18px rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.06);
+}
+.feature-card--biosensor {
+  grid-area: biosensor;
+}
+.feature-card--liflex {
+  grid-area: liflex;
+}
+.feature-card--smart {
+  grid-area: smart;
+}
+.feature-card--ota {
+  grid-area: ota;
+}
+.feature-card--five {
+  grid-area: five;
+}
+.feature-card--whisper {
+  grid-area: whisper;
+}
+.feature-card--ai {
+  grid-area: ai;
+}
+
+/* --- Section 5 & 6 : Calm Balance Breath --- */
+.calm h2 {
+  letter-spacing: 10px;
+}
+.calm .blue-box {
+  padding: 2.5rem 5rem;
+}
+
+/* --- Section 7 : Release Stress --- */
+.stress .blue-box {
+  padding: 1.2rem;
+  align-content: center;
+  height: -webkit-fill-available;
+}
+
+/* --- Section 11 : Liflex Track --- */
+.steps {
+  margin-top: 48px;
+  align-items: center;
+}
+.step-card {
+  position: relative;
+  background: var(--blue-card-bg);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.step-card::after {
+  content: "";
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 36px solid transparent;
+  border-right: 36px solid transparent;
+  border-top: 36px solid var(--blue-card-bg);
+}
+.step-badge {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 56px;
+  height: 56px;
+  background: var(--blue-card-bg);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.25);
+}
+.step-card p {
+  margin: 0;
+  font-weight: 500;
+}
+
+/* --- Section 13 : Smart Space Environment --- */
+.smart-space .u-pos {
+  max-width: 200px;
+}
+.smart-space .u-pos h3 {
+  align-items: flex-end;
+  gap: 5px;
+  color: var(--blue-aqua);
+  margin: 0;
+}
+
+/* =========================================
+   Typographic & layout refinements by breakpoint
+   ========================================= */
+
+/* ---------- Small mobile ---------- */
+@media (max-width: 575.98px) {
+  .s4-header {
+    padding: 1.8rem 7%;
+  }
+
+  .s4-video-icon {
+    top: 0.9rem;
+    right: 0.9rem;
+    width: 56px;
+  }
+
+  /* Feature grid: keep simple stacked feel */
+  .features-grid-inner {
+    width: 90%;
+    aspect-ratio: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "biosensor liflex"
+      "smart ota"
+      "five whisper"
+      "ai ai";
+  }
+
+  /* AI Safeguard: stack 3 items */
+  #ai-safeguard .overlay > .d-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .s14-item {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .overlay .row {
+    row-gap: 1.5rem;
+  }
+
+  /* Liflex */
+  .steps {
+    margin-top: 16px;
+  }
+  .step-card {
+    padding: 8px;
+    min-height: 60px;
+  }
+  .step-badge {
+    top: -10px;
+    width: 20px;
+    height: 20px;
+  }
+  .step-card::after {
+    bottom: -13px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid var(--blue-card-bg);
+  }
+}

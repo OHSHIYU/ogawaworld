@@ -1,0 +1,12 @@
+{
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "require": {
+    "league/commonmark": "^2.8",
+    "ezyang/htmlpurifier": "^4.19",
+    "phpmailer/phpmailer": "^7.0"
+  }
+}

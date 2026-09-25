@@ -1,0 +1,800 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   Theme Tokens
+   ========================================================= */
+:root {
+  --ogw-bg: #fff;
+  --ogw-fg: #1c1c1c;
+  --ogw-border: #eee;
+  --ogw-focus: 2px dotted #222;
+  --ogw-gold: #d4af37;
+
+  /* Navigation height (matches fixed header total height) */
+  --nav-h: 94px;
+
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+
+  --black: #111;
+  --grey: #444;
+  --white: #fff;
+}
+
+/* =========================================================
+   Base Typography & Layout
+   (Default = applies to all screen sizes)
+   ========================================================= */
+html {
+  font-size: 15px;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  padding-top: var(--nav-h);
+
+  font-family:
+    "Quicksand",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    sans-serif;
+  font-weight: 300;
+  line-height: 1.55;
+  color: var(--ogw-fg);
+  background: var(--ogw-bg);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.nav-locked {
+  overflow: hidden;
+}
+
+/* =========================================================
+   Top Navigation Bar
+   ========================================================= */
+.ogw-nav {
+  position: fixed;
+  isolation: isolate;
+  inset: 0 0 auto 0;
+  z-index: 99999;
+  background: var(--ogw-bg);
+  padding: 15px 50px;
+  transition:
+    box-shadow 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.22s ease;
+  transform: translateY(0);
+}
+.ogw-nav.ogw-nav--hidden {
+  transform: translateY(-100%);
+}
+.ogw-nav.is-scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+.ogw-nav__inner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 64px;
+  margin: 0 auto;
+}
+.ogw-logo {
+  display: inline-block;
+  width: 150px;
+  height: auto;
+}
+
+/* =========================================================
+   Desktop Menu (base)
+   ========================================================= */
+.ogw-menu {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-left: auto;
+}
+
+.ogw-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ogw-links a,
+.has-sub__link.sub-toggle {
+  font-size: 1.1rem;
+  font-weight: 500;
+
+  text-decoration: none;
+  color: var(--ogw-fg);
+  opacity: 0.85;
+  outline-offset: 3px;
+
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.ogw-links a:hover,
+.ogw-links a:focus {
+  opacity: 1;
+  color: var(--ogw-gold);
+}
+
+.ogw-links a.active,
+.ogw-links a[aria-current="page"] {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+/* =========================================================
+   Dropdowns
+   ========================================================= */
+.ogw-nav .has-sub {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.has-sub__link.sub-toggle {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+}
+
+.has-sub__link.sub-toggle:hover,
+.has-sub__link.sub-toggle:focus {
+  opacity: 1;
+  color: var(--ogw-gold);
+}
+
+.has-sub__link.sub-toggle.active {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.ogw-nav .sub {
+  position: absolute;
+  inset-inline-start: 0;
+  top: 105%;
+
+  min-width: 240px;
+  padding: 0.5rem;
+
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+
+  z-index: 1000;
+}
+
+.ogw-nav .sub > li {
+  list-style: none;
+}
+
+.ogw-nav .sub a {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.ogw-nav .sub a:hover,
+.ogw-nav .sub a:focus {
+  background: #f5f6f7;
+}
+
+.ogw-nav .sub[hidden] {
+  display: none;
+}
+
+/* Desktop hover/focus for dropdowns */
+@media (min-width: 1201px) {
+  .ogw-nav .has-sub:hover > .sub,
+  .ogw-nav .has-sub:focus-within > .sub {
+    display: block;
+  }
+
+  .ogw-nav .has-sub:hover > .sub[hidden],
+  .ogw-nav .has-sub:focus-within > .sub[hidden] {
+    display: block !important;
+  }
+}
+
+/* =========================================================
+   Burger (Mobile / Tablet)
+   ========================================================= */
+.ogw-burger {
+  display: none;
+  position: relative;
+
+  margin-left: auto;
+  width: 44px;
+  height: 44px;
+  padding: 8px;
+
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+
+  pointer-events: auto;
+  touch-action: manipulation;
+}
+
+.ogw-burger:focus-visible {
+  outline: var(--ogw-focus);
+}
+
+.ogw-burger span {
+  display: block;
+  height: 2px;
+  margin: 7px 0;
+  background: var(--ogw-fg);
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.ogw-burger[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.ogw-burger[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.ogw-burger[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* =========================================================
+   Mobile Backdrop
+   ========================================================= */
+.ogw-backdrop {
+  position: fixed;
+  inset: var(--nav-h) 0 0 0;
+
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(1px);
+
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 2001;
+}
+
+.ogw-backdrop.show {
+  opacity: 1;
+}
+
+/* =========================================================
+   Mobile & Tablets (≤ 1200px)
+   ========================================================= */
+@media (max-width: 1200px) {
+  /* Slightly tighter header on mobile */
+  .ogw-nav {
+    padding: 10px 16px;
+  }
+
+  .ogw-nav__inner {
+    height: 56px;
+  }
+
+  .ogw-burger {
+    display: inline-block;
+  }
+
+  /* Mobile sheet menu */
+  .ogw-menu {
+    position: fixed;
+    top: var(--nav-h);
+    inset-inline: 0;
+
+    max-height: calc(100dvh - var(--nav-h) - var(--safe-bottom));
+    padding: 20px 20px calc(20px + var(--safe-bottom));
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow: auto;
+
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid var(--ogw-border);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+
+    transform: translateY(-8px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+      transform 0.2s ease,
+      opacity 0.2s ease;
+    z-index: 3002;
+  }
+
+  .ogw-menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  /* Vertical list, full-width items */
+  .ogw-links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .ogw-links li {
+    width: 100%;
+    list-style: none;
+  }
+
+  .ogw-links a,
+  .has-sub__link.sub-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 12px 10px;
+
+    border-radius: 10px;
+    font-size: 1.05rem;
+    text-align: left;
+  }
+
+  /* Active + hover states feel like buttons */
+  .ogw-links a:hover,
+  .ogw-links a:focus,
+  .ogw-links a.active,
+  .has-sub__link.sub-toggle.active {
+    color: var(--black);
+    opacity: 1;
+  }
+
+  /* Dropdown container on mobile */
+  .ogw-nav .has-sub {
+    display: block;
+    margin-top: 4px;
+  }
+
+  .ogw-nav .has-sub__link {
+    flex: 1 1 auto;
+  }
+
+  .ogw-nav .sub {
+    position: static;
+    width: 100%;
+
+    margin-top: 4px;
+    padding: 4px 0 6px 14px;
+
+    border: 0;
+    box-shadow: none;
+    border-left: 1px solid #eee;
+  }
+
+  /* Shop Now CTA at bottom */
+  .ogw-menu__cta {
+    padding-top: 12px;
+  }
+
+  .ogw-menu__shop {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 999px;
+    font-weight: 600;
+  }
+}
+
+/* =========================================================
+   Normal Desktop (1201px – 1439px)
+   ========================================================= */
+@media (min-width: 1201px) and (max-width: 1439px) {
+  .ogw-nav {
+    padding-inline: 32px; /* slightly tighter on normal desktop */
+  }
+
+  .ogw-nav__inner {
+    max-width: 1200px; /* central content width */
+  }
+
+  .ogw-links a,
+  .has-sub__link.sub-toggle {
+    font-size: 1.05rem; /* slightly smaller text if you want */
+  }
+}
+
+/* =========================================================
+   Large Desktop (≥ 1440px)
+   ========================================================= */
+@media (min-width: 1440px) {
+  .ogw-nav {
+    padding-inline: 64px; /* more breathing room on big screens */
+  }
+
+  .ogw-nav__inner {
+    max-width: 1360px; /* wider container */
+  }
+
+  .ogw-links {
+    gap: 26px; /* more space between links */
+  }
+
+  .ogw-links a,
+  .has-sub__link.sub-toggle {
+    font-size: 1.15rem; /* a bit larger for readability */
+  }
+
+  .ogw-logo {
+    width: 170px; /* larger logo on big monitors */
+  }
+}
+
+/* =========================================================
+   Reduced Motion
+   ========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  .ogw-burger span,
+  .ogw-nav,
+  .ogw-links a,
+  .has-sub__link.sub-toggle,
+  .ogw-menu {
+    transition: none !important;
+  }
+}
+
+/* =========================================================
+   三级菜单样式（Research and Publication）
+   适用于桌面端 + 移动端自适应
+   ========================================================= */
+
+/* 三级菜单按钮样式（Research and Publication 的触发按钮） */
+.ogw-nav .sub-toggle-level2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+}
+
+.ogw-nav .sub-toggle-level2:hover,
+.ogw-nav .sub-toggle-level2:focus {
+    background: #f5f6f7;
+}
+
+.ogw-nav .sub-toggle-level2 .fa-angle-right {
+    margin-left: auto;
+    font-size: 12px;
+    transition: transform 0.2s ease;
+}
+
+/* 三级菜单容器（桌面端：默认向右弹出） */
+.ogw-nav .sub .has-sub {
+    position: relative;
+}
+
+.ogw-nav .sub .has-sub .sub {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    min-width: 220px;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    z-index: 1001;
+}
+
+/* 桌面端：悬停时显示三级菜单 */
+@media (min-width: 1201px) {
+    .ogw-nav .sub .has-sub:hover > .sub,
+    .ogw-nav .sub .has-sub:focus-within > .sub {
+        display: block;
+    }
+}
+
+/* 展开时箭头旋转 */
+.ogw-nav .has-sub .sub-toggle-level2[aria-expanded="true"] .fa-angle-right {
+    transform: rotate(90deg);
+}
+
+/* =========================================================
+   移动端三级菜单适配（覆盖上面的绝对定位）
+   ========================================================= */
+@media (max-width: 1200px) {
+    /* 移动端：三级菜单改为向下展开（不向右） */
+    .ogw-nav .sub .has-sub {
+        position: static;
+    }
+    
+    .ogw-nav .sub .has-sub .sub {
+        position: static;
+        left: auto;
+        top: auto;
+        width: 100%;
+        padding-left: 20px;  /* 缩进表示层级关系 */
+        margin-top: 4px;
+        border-left: 1px solid #eee;
+        border-radius: 0;
+        box-shadow: none;
+        background: transparent;
+    }
+    
+    /* 移动端：三级菜单的触发按钮样式调整 */
+    .ogw-nav .sub-toggle-level2 {
+        justify-content: space-between;
+    }
+    
+    /* 移动端：箭头改为向下/向上旋转 */
+    .ogw-nav .sub-toggle-level2 .fa-angle-right {
+        transform: rotate(90deg);
+    }
+    
+    .ogw-nav .has-sub .sub-toggle-level2[aria-expanded="true"] .fa-angle-right {
+        transform: rotate(180deg);
+    }
+    
+    /* 移动端：增大点击区域，方便手指 */
+    .ogw-nav .sub a,
+    .ogw-nav .sub button.sub-toggle {
+        padding: 12px 16px;
+        font-size: 16px;
+    }
+}
+
+/* =========================================================
+   研究页面通用样式（UM、USM、SEGi 页面用）
+   ========================================================= */
+.research-page {
+    padding: 60px 20px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.research-page .uni-logo {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.research-page .qs-ranking {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.research-page .uni-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.research-page .section-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 40px 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #d4af37;
+}
+
+.research-page .stats-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.research-page .stat-card {
+    flex: 1;
+    min-width: 160px;
+    background: #f8f9fa;
+    border-radius: 16px;
+    padding: 24px 16px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.research-page .stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.research-page .stat-number {
+    font-size: 42px;
+    font-weight: 700;
+    color: #d4af37;
+    line-height: 1.2;
+}
+
+.research-page .stat-label {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.research-page .publication-box {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.research-page .publication-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.research-page .publication-journal {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 12px;
+    font-style: italic;
+}
+
+.research-page .btn-gold {
+    display: inline-block;
+    background: #d4af37;
+    color: #111;
+    padding: 10px 24px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.research-page .btn-gold:hover {
+    background: #c4a02a;
+    color: #111;
+}
+
+@media (max-width: 768px) {
+    .research-page {
+        padding: 30px 16px 60px;
+    }
+    
+    .research-page .stats-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .research-page .stat-card {
+        min-width: auto;
+    }
+    
+    .research-page .stat-number {
+        font-size: 32px;
+    }
+}
+.ogw-nav .sub {
+  position: absolute;
+  inset-inline-start: 0;
+  top: 105%;
+  min-width: 240px;
+  padding: 0.5rem;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+}
+/* =========================================================
+   修复：二级菜单垂直排列（Overseer 在上，Research 在下）
+   ========================================================= */
+
+/* 强制二级菜单的所有 li 垂直排列 */
+.ogw-nav .sub li {
+    display: block !important;
+    width: 100%;
+    float: none !important;
+    clear: both !important;
+}
+
+/* 确保链接和按钮也是块级元素，占满整行 */
+.ogw-nav .sub a,
+.ogw-nav .sub button {
+    display: block !important;
+    width: 100%;
+    text-align: left;
+}
+
+/* 桌面端也确保垂直 */
+@media (min-width: 1201px) {
+    .ogw-nav .sub li {
+        display: block !important;
+    }
+}
+/* =========================================================
+   最终修复：统一 Overseer 和 Research and Publication 的样式
+   ========================================================= */
+
+/* 1. 强制二级菜单所有 li 垂直排列（已解决） */
+.ogw-nav .sub li {
+    display: block !important;
+    width: 100%;
+}
+
+/* 2. 统一所有二级菜单项的链接和按钮样式 */
+.ogw-nav .sub a,
+.ogw-nav .sub .sub-toggle-level2 {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 12px !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    line-height: 1.4 !important;
+    color: #333 !important;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+}
+
+/* 3. 确保 Overseer 没有箭头时，文字位置一致 */
+.ogw-nav .sub a {
+    justify-content: flex-start !important;
+}
+
+/* 4. 箭头图标样式统一 */
+.ogw-nav .sub .fa-angle-right {
+    font-size: 12px;
+    margin-left: 8px;
+    opacity: 0.7;
+}
+
+/* 5. 悬停效果统一 */
+.ogw-nav .sub a:hover,
+.ogw-nav .sub .sub-toggle-level2:hover {
+    background: #f5f6f7 !important;
+    color: #d4af37 !important;
+}
+

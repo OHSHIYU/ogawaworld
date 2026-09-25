@@ -1,0 +1,32 @@
+.fx-float-y {
+  /* Larger movements if increase */
+  --fx-float-distance: 20px;
+
+  /* Shorter duration for quicker loop */
+  --fx-float-duration: 2.5s;
+  --fx-float-delay: 0.1s;
+  --fx-transform: translateZ(0);
+
+  animation: fx-float-y var(--fx-float-duration) ease-in-out
+    var(--fx-float-delay) infinite;
+  will-change: transform;
+}
+
+/* keyframes use your base transform then add the float */
+@keyframes fx-float-y {
+  0%,
+  100% {
+    transform: var(--fx-transform) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: var(--fx-transform)
+      translate3d(0, calc(-1 * var(--fx-float-distance)), 0);
+  }
+}
+
+/* respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .fx-float-y {
+    animation: none;
+  }
+}

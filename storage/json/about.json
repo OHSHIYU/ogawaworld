@@ -1,0 +1,131 @@
+{
+  "banner": {
+    "eyebrow": "How It Started",
+    "title": "WELLNESS TO THE WORLD",
+    "body": "From our humble beginnings in 1996 till today, the mission of OGAWA has always remarked the same - to bring wellness to the world. OGAWA has a wide distribution network of more than 1000 retail outlets and counters in more than 20 countries across the globe. OGAWA is now a global innovator of wellness, a worldwide force, that will not stop inventing and innovating wellness technologies and products to improve the lifestyle of people all over the world, for both today as well as tomorrow.",
+    "image": "img/about/ogawa-map.png"
+  },
+  "stats": [
+    { "value": "1996", "label": "Years Since" },
+    { "value": "20+", "label": "Countries" },
+    { "value": "1000+", "label": "Retail Outlets" },
+    { "value": "4.5", "label": "Ratings" }
+  ],
+  "cards": [
+    {
+      "eyebrow": "Our Vision",
+      "title": "To Live and Deliver Wellness Every Day",
+      "body": "We envision a world where everyone can experience holistic wellness — body, mind, and soul — through innovative products and meaningful experiences that inspire a balanced, healthier lifestyle."
+    },
+    {
+      "eyebrow": "Our Mission",
+      "title": "Driven by Innovation, Guided by Wellness",
+      "body": "Our mission is to be a global wellness leader by continuously inventing and innovating technologies that elevate comfort and health. We are committed to improving lives — for our customers, our people, our partners, and the communities we serve."
+    }
+  ],
+  "awards": {
+    "title": "Awards & Achievements",
+    "items": [
+      {
+        "logo": "img/about/awards/asia-pacific-2.jpg",
+        "name": "Asia Pacific Enterprise Awards",
+        "year": "2022"
+      },
+      {
+        "logo": "img/about/awards/sin-chew-2.jpg",
+        "name": "Sin Chew Business Excellence Awards",
+        "year": "2018 - 2022"
+      },
+      {
+        "logo": "img/about/awards/retailers-association.jpg",
+        "name": "Malaysia Retailers Association Awards",
+        "year": "2020"
+      },
+      {
+        "logo": "img/about/awards/sin-chew.jpg",
+        "name": "Sin Chew Business Excellence Awards",
+        "year": "2020"
+      },
+      {
+        "logo": "img/about/awards/malaysia-records.jpg",
+        "name": "The Malaysia Book of Records",
+        "year": "2019"
+      },
+      {
+        "logo": "img/about/awards/innovation.jpg",
+        "name": "International Innovation Awards",
+        "year": "2018"
+      },
+      {
+        "logo": "img/about/awards/muslim-world.jpg",
+        "name": "Muslim World Entrepreneur Development Award",
+        "year": "2018"
+      },
+      {
+        "logo": "img/about/awards/malaysia-hw.jpg",
+        "name": "Malaysia Health & Wellness Brand Awards",
+        "year": "2018"
+      },
+      {
+        "logo": "img/about/awards/retail.jpg",
+        "name": "Retail Excellence Award",
+        "year": "2017"
+      },
+      {
+        "logo": "img/about/awards/paihang.jpg",
+        "name": "Paihang 360 China's Top 10 Massage Chair",
+        "year": "2012 - 2014"
+      },
+      {
+        "logo": "img/about/awards/asia-excellence.jpg",
+        "name": "Asia Excellence Brand Award",
+        "year": "2014"
+      },
+      {
+        "logo": "img/about/awards/tvb.jpg",
+        "name": "Hong Kong TVB Most Popular Massage Chair Brand",
+        "year": "2014"
+      },
+      {
+        "logo": "img/about/awards/awe-award.jpg",
+        "name": "Best Product Award, Most Popular Award",
+        "year": null
+      },
+      {
+        "logo": "img/about/awards/matrade.jpg",
+        "name": "MATRADE Industry Excellence Award",
+        "year": "2011"
+      },
+      {
+        "logo": "img/about/awards/reader-digest.jpg",
+        "name": "Gold Award - Reader's Digest Trusted Brand",
+        "year": "2011 - 2012"
+      },
+      {
+        "logo": "img/about/awards/30-valuable.jpg",
+        "name": "Malaysia's 30 Most Valuable Brands",
+        "year": "2008"
+      },
+      {
+        "logo": "img/about/awards/superbrands.jpg",
+        "name": "Superbrands Malaysia",
+        "year": "2005"
+      },
+      {
+        "logo": "img/about/awards/best-international.jpg",
+        "name": "Best International Brand Category",
+        "year": "2004"
+      },
+      {
+        "logo": "img/about/awards/asia-pacific.jpg",
+        "name": "Asia Pacific Entrepreneur Excellence Award",
+        "year": "2003"
+      },
+      {
+        "logo": "img/about/awards/golden-bull.jpg",
+        "name": "Top 10 Winners of the Golden Bull Award",
+        "year": "2003"
+      }
+    ]
+  }
+}

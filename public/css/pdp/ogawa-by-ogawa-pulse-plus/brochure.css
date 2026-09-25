@@ -1,0 +1,1132 @@
+.container.text-center.py-5 {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.btn-primary {
+  background-color: #0056b3;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2rem;
+}
+
+.btn-primary:hover {
+  background-color: #003d82;
+}/* ========== Pulse Plus 通用样式 ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.full-image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.full-image img.bg-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.full-image.with-text {
+    position: relative;
+}
+
+.full-image.with-text .text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    pointer-events: auto;
+}
+
+/* ========== 第1面 ========== */
+.brochure-1 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.pulse-icon img {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.main-title {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+.main-desc {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    color: #ffffff;
+    margin-bottom: 15px;
+    max-width: 80%;
+    font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+.sub-desc {
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+    color: #ffffff;
+    max-width: 80%;
+    font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+/* ========== 第2面 ========== */
+.brochure-2 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.speed-icon img {
+    width: 50px;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+.section-sub {
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+.speed-levels {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.level-item {
+    font-size: 1.2rem;
+    color: #4A90E2;
+    font-weight: 600;
+    font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+.speed-features {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.speed-features span {
+    font-size: 0.9rem;
+    color: #ffffff;
+    font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+.speed-scale {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.speed-scale span {
+    font-size: 0.9rem;
+    color: #ffffff;
+    font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+.speed-label {
+    font-size: 0.8rem;
+    color: #cccccc;
+    font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+/* ========== 第3面 ========== */
+.brochure-3 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.mode-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.mode-item img {
+    width: 40px;
+}
+
+.mode-item span {
+    font-size: 1rem;
+    color: #ffffff;
+    font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+/* ========== 第4面（文字靠右） ========== */
+.brochure-4 {
+    justify-content: center;
+    align-items: flex-end;
+    text-align: left;
+}
+
+.brochure-4 .right-content {
+    max-width: 45%;
+    text-align: left;
+}
+
+.control-title {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+.control-desc {
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+    color: #ffffff;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+.pulse-mark {
+    font-size: 1rem;
+    color: #4A90E2;
+    font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+/* ========== 第5、6面通用 ========== */
+.brochure-5, .brochure-6 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.section-desc {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    color: #ffffff;
+    max-width: 80%;
+    margin: 10px auto;
+    line-height: 1.5;
+    font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+/* ========== 第7面 ========== */
+.brochure-7 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.features-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.feature-item img {
+    width: 60px;
+}
+
+.feature-item span {
+    font-size: 0.85rem;
+    color: #ffffff;
+    font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+.brand-name {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-top: 30px;
+    font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+/* ========== 响应式：手机 ========== */
+@media (max-width: 768px) {
+    .brochure-4 .right-content {
+        max-width: 70%;
+    }
+    
+    .features-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .main-desc, .sub-desc {
+        max-width: 95%;
+    }
+    
+    .section-desc {
+        max-width: 95%;
+    }
+    
+    .mode-item {
+        gap: 10px;
+    }
+    
+    .mode-item span {
+        font-size: 0.85rem;
+    }
+}
+
+/* ========== 第1面 ========== */
+.brochure-1 {
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-left: 8%;
+    padding-right: 5%;
+}
+
+/* 图标 */
+.pulse-icon {
+    margin-bottom: 0;
+}
+
+.pulse-icon img {
+    width: 180px;
+    height: auto;
+}
+
+/* 标题 */
+.main-title {
+    font-size: clamp(1.2rem, 3.5vw, 2.2rem);
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 25px;
+    margin-top: 0;
+    font-family: 'Quicksand', 'Poppins', 'Segoe UI', 'Helvetica Neue', sans-serif;
+    line-height: 1.2;
+}
+
+/* 描述文字 - 电脑 */
+.main-desc {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: #000000;
+    margin-bottom: 15px;
+    width: 40%;
+    font-family: 'Quicksand', 'Poppins', 'Segoe UI', 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+}
+
+.sub-desc {
+    font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+    color: #000000;
+    width: 40%;
+    font-family: 'Quicksand', 'Poppins', 'Segoe UI', 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+}
+
+/* ========== 平板端 (769px - 1024px) ========== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .brochure-1 {
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 5%;
+    }
+    
+    .pulse-icon {
+        margin-bottom: 0;
+    }
+    
+    .pulse-icon img {
+        width: 100px;
+    }
+    
+    .main-title {
+        font-size: 1.5rem;
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+    
+    .main-desc, .sub-desc {
+        width: 45%;          /* 55% → 45% */
+        font-size: 0.85rem;
+    }
+    
+    .main-desc {
+        margin-bottom: 6px;
+    }
+}
+
+/* ========== 手机端 (≤768px) ========== */
+@media (max-width: 768px) {
+    .brochure-1 {
+        padding-left: 5%;
+        padding-right: 5%;
+        justify-content: flex-start;
+        padding-top: 15% !important;   /* 从 5% 改成 25%，整体下移 */
+        gap: 0 !important;
+    }
+    
+    .pulse-icon {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+        line-height: 0 !important;
+    }
+    
+    .pulse-icon img {
+        width: 41px;
+        display: block;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .main-title {
+        font-size: 0.64rem;
+        margin: 0 0 6px 0 !important;
+        padding: 0 !important;
+        line-height: 1.2;
+    }
+    
+    .main-desc, .sub-desc {
+        width: 45%;
+        font-size: 0.41rem;
+        line-height: 1.3;
+    }
+    
+    .main-desc {
+        margin-bottom: 3px;
+    }
+}
+
+/* ========== 小手机端 (≤480px) ========== */
+@media (max-width: 480px) {
+    .brochure-1 {
+        padding-top: 10% !important;   /* 小手机适当少一点，不贴底 */
+    }
+    
+    .pulse-icon img {
+        width: 34px;
+    }
+    
+    .main-title {
+        font-size: 0.56rem;
+    }
+    
+    .main-desc, .sub-desc {
+        width: 50%;
+        font-size: 0.38rem;
+    }
+}
+/* ========== 第2面 ========== */
+.brochure-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5%;
+}
+
+/* 顶部文字组 */
+.top-text {
+    width: 100%;
+}
+
+/* 标题 */
+.title-2 {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 15px;
+    font-family: 'Quicksand', 'Poppins', sans-serif;
+    text-align: center;
+}
+
+/* 副标题 */
+.subtitle-2 {
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 30px;
+    font-family: 'Quicksand', 'Poppins', sans-serif;
+    text-align: center;
+}
+
+/* 图标容器 */
+.pulse-icon-2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.pulse-icon-2 img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ========== 电脑端 ========== */
+@media (min-width: 992px) {
+    .pulse-icon-2 img {
+        max-height: 300px;   /* 电脑图标更大 */
+        min-width: 200px;
+    }
+}
+
+/* ========== 平板端 ========== */
+@media (min-width: 769px) and (max-width: 991px) {
+    .title-2 {
+        font-size: 1.6rem;
+    }
+    
+    .subtitle-2 {
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+    }
+    
+    .pulse-icon-2 img {
+        max-height: 180px;
+    }
+}
+
+/* ========== 手机端 ========== */
+@media (max-width: 768px) {
+    .brochure-2 {
+        padding: 5% 3%;
+    }
+    
+    .title-2 {
+        font-size: 0.85rem;        /* 进一步缩小 */
+        margin-bottom: 5px;
+    }
+    
+    .subtitle-2 {
+        font-size: 0.55rem;        /* 进一步缩小 */
+        margin-bottom: 12px;
+        line-height: 1.3;
+        max-width: 100%;
+        word-break: break-word;    /* 强制换行 */
+    }
+    
+    .pulse-icon-2 img {
+        max-height: 80px;           /* 适当调整 */
+        min-width: 60px;
+    }
+}
+
+/* ========== 小手机端 ========== */
+@media (max-width: 480px) {
+    .brochure-2 {
+        padding: 4% 2%;
+    }
+    
+    .title-2 {
+        font-size: 0.75rem;
+        margin-bottom: 4px;
+    }
+    
+    .subtitle-2 {
+        font-size: 0.5rem;
+        margin-bottom: 10px;
+        line-height: 1.3;
+    }
+    
+    .pulse-icon-2 img {
+        max-height: 65px;
+        min-width: 50px;
+    }
+}
+/* ========== 第3面（单色背景） ========== */
+.pulse-section-3 {
+    background-color: #c8c8c8;
+    width: 100%;
+    padding: 60px 24px;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-content-3 {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* 标题 */
+.title-3 {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    font-family: 'Quicksand', 'Poppins', sans-serif;
+}
+
+/* 副标题 */
+.subtitle-3 {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    font-weight: 500;
+    color: #333333;
+    margin-bottom: 50px;
+    font-family: 'Quicksand', 'Poppins', sans-serif;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 5个模式网格 */
+.modes-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* 每个模式项 */
+.mode-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+}
+
+.mode-item img {
+    width: 100px;
+    height: auto;
+}
+
+.mode-item span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    font-family: 'Quicksand', 'Poppins', sans-serif;
+}
+
+/* ========== 电脑端 ========== */
+@media (min-width: 992px) {
+    .mode-item img {
+        width: 200px;  /* 160px → 200px 更大 */
+    }
+    
+    .mode-item span {
+        font-size: 1.5rem;
+    }
+    
+    .modes-grid {
+        gap: 20px;
+    }
+}
+
+/* ========== 平板端 ========== */
+@media (min-width: 769px) and (max-width: 991px) {
+    .mode-item img {
+        width: 110px;
+    }
+    
+    .modes-grid {
+        gap: 15px;
+    }
+}
+
+/* ========== 手机端 ========== */
+@media (max-width: 768px) {
+    .pulse-section-3 {
+        padding: 40px 16px;
+        min-height: auto;
+    }
+    
+    .title-3 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+    
+    .subtitle-3 {
+        font-size: 0.7rem;
+        margin-bottom: 30px;
+        max-width: 95%;
+    }
+    
+    /* 手机用 flex，手动控制换行 */
+    .modes-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        row-gap: 25px;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    /* 强制每行3个后换行，下面两个自然居中 */
+    .mode-item {
+        width: 85px;
+        flex-shrink: 0;
+    }
+    
+    .mode-item img {
+        width: 80px;
+    }
+    
+    .mode-item span {
+        font-size: 0.75rem;
+    }
+}
+
+/* ========== 小手机端 ========== */
+@media (max-width: 480px) {
+    .modes-grid {
+        gap: 8px;
+        row-gap: 20px;
+        max-width: 260px;
+    }
+    
+    .mode-item {
+        width: 75px;
+    }
+    
+    .mode-item img {
+        width: 60px;
+    }
+    
+    .mode-item span {
+        font-size: 0.65rem;
+    }
+}
+/* ========== 第4面 ========== */
+.brochure-4 {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-end !important;
+    text-align: left !important;
+    background-color: rgba(0, 0, 0, 0.05) !important;
+    padding: 5% 5% 5% 20% !important;
+}
+
+/* 右边内容容器 */
+.brochure-4 .right-content {
+    width: 45% !important;
+    text-align: left !important;
+}
+
+/* 标题 */
+.title-4 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem) !important;
+    font-weight: 700 !important;
+    color: #000000 !important;
+    margin-bottom: 20px !important;
+    font-family: 'Quicksand', 'Poppins', sans-serif !important;
+}
+
+/* 描述 */
+.desc-4 {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem) !important;
+    font-weight: 400 !important;
+    color: #000000 !important;
+    line-height: 1.6 !important;
+    margin-bottom: 0 !important;
+    font-family: 'Quicksand', 'Poppins', sans-serif !important;
+}
+
+/* 手机端 - 左边距加大 */
+@media (max-width: 768px) {
+    .brochure-4 {
+        padding: 5% 5% 5% 35% !important;  /* 从 10% 增加到 25% */
+    }
+    
+    .brochure-4 .right-content {
+        width: 60% !important;
+    }
+    
+    .title-4 {
+        font-size: 1rem !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .desc-4 {
+        font-size: 0.7rem !important;
+        line-height: 1.5 !important;
+    }
+}
+
+/* 小手机端 */
+@media (max-width: 480px) {
+    .brochure-4 {
+        padding: 5% 5% 5% 35% !important;
+    }
+    
+    .brochure-4 .right-content {
+        width: 65% !important;
+    }
+    
+    .title-4 {
+        font-size: 0.9rem !important;
+    }
+    
+    .desc-4 {
+        font-size: 0.6rem !important;
+    }
+}
+/* ========== 第5面 ========== */
+.brochure-5 {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    background-color: transparent !important;
+    padding: 5% 5% 5% 8% !important;
+}
+
+/* 左边内容容器 - 电脑宽度 40% */
+.brochure-5 .left-content {
+    width: 40% !important;
+    text-align: left !important;
+}
+
+/* 标题 */
+.title-5 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem) !important;
+    font-weight: 700 !important;
+    color: #000000 !important;
+    margin-bottom: 20px !important;
+    font-family: 'Quicksand', 'Poppins', sans-serif !important;
+}
+
+/* 描述 */
+.desc-5 {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem) !important;
+    font-weight: 400 !important;
+    color: #000000 !important;
+    line-height: 1.6 !important;
+    margin-bottom: 15px !important;
+    font-family: 'Quicksand', 'Poppins', sans-serif !important;
+}
+
+/* 平板端 */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .brochure-5 {
+        padding: 5% 5% 5% 8% !important;
+    }
+    
+    .brochure-5 .left-content {
+        width: 40% !important;
+    }
+    
+    .title-5 {
+        font-size: 1.1rem !important;
+        margin-bottom: 12px !important;
+    }
+    
+    .desc-5 {
+        font-size: 0.7rem !important;
+        margin-bottom: 10px !important;
+    }
+}
+
+/* 手机端 - 宽度 35% */
+@media (max-width: 768px) {
+    .brochure-5 {
+        padding: 5% 5% 5% 8% !important;
+    }
+    
+    .brochure-5 .left-content {
+        width: 35% !important;
+    }
+    
+    .title-5 {
+        font-size: 0.8rem !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .desc-5 {
+        font-size: 0.5rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 6px !important;
+    }
+}
+
+/* 小手机端 */
+@media (max-width: 480px) {
+    .brochure-5 .left-content {
+        width: 40% !important;
+    }
+    
+    .title-5 {
+        font-size: 0.7rem !important;
+    }
+    
+    .desc-5 {
+        font-size: 0.45rem !important;
+    }
+}
+/* ========== 第6面 ========== */
+.brochure-6 {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    background-color: transparent !important;
+    padding: 5% 5% 5% 8% !important;
+}
+
+/* 左边内容容器 */
+.brochure-6 .left-content {
+    width: 40% !important;
+    text-align: left !important;
+}
+
+/* 标题 */
+.title-6 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem) !important;
+    font-weight: 700 !important;
+    color: #000000 !important;
+    margin-bottom: 20px !important;
+    font-family: 'Quicksand', 'Poppins', sans-serif !important;
+}
+
+/* 描述 */
+.desc-6 {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem) !important;
+    font-weight: 400 !important;
+    color: #000000 !important;
+    line-height: 1.6 !important;
+    margin-bottom: 0 !important;
+    font-family: 'Quicksand', 'Poppins', sans-serif !important;
+}
+
+/* 平板端 */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .brochure-6 {
+        padding: 5% 5% 5% 8% !important;
+    }
+    
+    .brochure-6 .left-content {
+        width: 40% !important;
+    }
+    
+    .title-6 {
+        font-size: 1.1rem !important;
+        margin-bottom: 12px !important;
+    }
+    
+    .desc-6 {
+        font-size: 0.7rem !important;
+    }
+}
+
+/* 手机端 */
+@media (max-width: 768px) {
+    .brochure-6 {
+        padding: 5% 5% 5% 8% !important;
+    }
+    
+    .brochure-6 .left-content {
+        width: 35% !important;
+    }
+    
+    .title-6 {
+        font-size: 0.8rem !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .desc-6 {
+        font-size: 0.5rem !important;
+        line-height: 1.4 !important;
+    }
+}
+
+/* 小手机端 */
+@media (max-width: 480px) {
+    .brochure-6 .left-content {
+        width: 40% !important;
+    }
+    
+    .title-6 {
+        font-size: 0.7rem !important;
+    }
+    
+    .desc-6 {
+        font-size: 0.45rem !important;
+    }
+}
+
+/* ========== 第7面 ========== */
+.pulse-section-7 {
+    background-color: #f5f5f5;
+    width: 100%;
+    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-content-7 {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title-7 {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 50px;
+    font-family: 'Quicksand', 'Poppins', sans-serif;
+}
+
+/* 网格 - 缝隙 3px */
+.features-grid-7 {
+    display: flex;
+    justify-content: center;
+    gap: 3px;  /* 极小缝隙 */
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* 每个功能项 */
+.feature-item-7 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    width: 240px;  /* 加宽，让照片有空间放大 */
+}
+
+.feature-item-7 img {
+    width: 100%;
+    max-width: 160px;  /* 照片放大 */
+    height: auto;
+}
+
+.feature-item-7 span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    font-family: 'Quicksand', 'Poppins', sans-serif;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+/* 电脑端 */
+@media (min-width: 992px) {
+    .section-content-7 {
+        max-width: 1000px;
+    }
+    
+    .feature-item-7 {
+        width: 240px;
+    }
+    
+    .feature-item-7 img {
+        max-width: 170px;
+    }
+}
+
+/* 平板端 */
+@media (min-width: 769px) and (max-width: 991px) {
+    .section-content-7 {
+        max-width: 800px;
+    }
+    
+    .feature-item-7 {
+        width: 190px;
+    }
+    
+    .feature-item-7 img {
+        max-width: 130px;
+    }
+}
+
+/* 手机端 - 一行2个 */
+@media (max-width: 768px) {
+    .pulse-section-7 {
+        padding: 40px 12px;
+    }
+    
+    .title-7 {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+    }
+    
+    .features-grid-7 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    
+    .feature-item-7 {
+        width: auto;
+        gap: 8px;
+    }
+    
+    .feature-item-7 img {
+        max-width: 100px;
+    }
+    
+    .feature-item-7 span {
+        font-size: 0.7rem;
+    }
+}
+
+/* 小手机端 */
+@media (max-width: 480px) {
+    .features-grid-7 {
+        gap: 5px;
+    }
+    
+    .feature-item-7 img {
+        max-width: 75px;
+    }
+    
+    .feature-item-7 span {
+        font-size: 0.6rem;
+    }
+}

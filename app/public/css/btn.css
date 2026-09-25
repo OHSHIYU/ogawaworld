@@ -1,0 +1,91 @@
+/* Global */
+/* Ghost button */
+.btn-ghost {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  border: 1px solid var(--black);
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  isolation: isolate;
+  transition: color 0.45s ease;
+}
+.btn-ghost::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--black);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.45s ease;
+  z-index: -1;
+}
+.btn-ghost > * {
+  position: relative;
+  z-index: 1;
+}
+.btn-ghost:hover::before,
+.btn-ghost:focus-visible::before {
+  transform: scaleX(1);
+}
+.btn-ghost:hover,
+.btn-ghost:focus-visible {
+  color: #fff;
+}
+.btn-ghost--light {
+  border-color: #fff;
+  color: #eee;
+}
+.btn-ghost--light::before {
+  background: #fff;
+}
+.btn-ghost--light:hover,
+.btn-ghost--light:focus-visible {
+  color: #111;
+}
+.overlay .btn-ghost--light {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: saturate(140%) blur(0.5px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn-ghost::before {
+    transition: none;
+  }
+}
+@media (max-width: 768px) {
+  .btn-ghost {
+    padding: 10px 14px;
+    font-size: 15px;
+    border-radius: 8px;
+  }
+}
+
+/* Solid button to complement ghost button */
+.btn-solid {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--black);
+  background: var(--black);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1;
+  transition: transform 0.15s ease, box-shadow 0.25s ease, opacity 0.2s ease;
+  gap: 5px;
+}
+.btn-solid:hover,
+.btn-solid:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+  opacity: 0.95;
+}

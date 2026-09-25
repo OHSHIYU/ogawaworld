@@ -1,0 +1,74 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* font family */
+  --avenir: "Avenir", sans-serif;
+}
+.container-fluid {
+  padding: 0;
+}
+.main {
+  font-family:
+    var(--avenir),
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans CJK TC",
+    "Microsoft JhengHei",
+    "PingFang TC",
+    "Heiti TC",
+    sans-serif;
+}
+.main h1,
+.main h2 {
+  font-weight: 700;
+}
+.col-2 {
+  display: grid;
+  justify-items: center;
+}
+
+.gradient-background {
+  background: linear-gradient(135deg, #cfae8f 0%, #e0cfb8 50%, #efe3d1 100%);
+}
+
+/* Base frame for each brochure "page" */
+.full-image-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--img-w, 3969) / var(--img-h, 1721);
+}
+.full-image-frame .overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  pointer-events: none;
+  padding: 5rem;
+}
+
+/* Responsive Layout Adjustments */
+@media (max-width: 991.98px) {
+}
+
+/* Small mobile devices (e.g., up to 575.98px) */
+@media (max-width: 575.98px) {
+  .full-image-frame .overlay {
+    padding: 2rem;
+  }
+}
+
+/* Tablets (e.g., 576px to 991.98px) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+}
+
+/* Desktops (e.g., 992px and up) */
+@media (min-width: 992px) {
+}

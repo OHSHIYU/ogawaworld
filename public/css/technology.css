@@ -1,0 +1,380 @@
+:root {
+  --step-0: clamp(12px, 0.86rem + 0.1vw, 14px);
+  --step-1: clamp(14px, 0.9rem + 0.4vw, 18px);
+  --step-2: clamp(18px, 1rem + 0.8vw, 26px);
+  --step-3: clamp(22px, 1.15rem + 1.2vw, 34px);
+  --step-4: clamp(28px, 1.4rem + 1.8vw, 46px);
+  --container-max: 1280px;
+  --container-pad: clamp(12px, 4vw, 36px);
+  --muted: #6f7173;
+  --text: #222;
+  --bg-1: #efefef;
+}
+
+/* Larger desktops */
+@media (min-width: 1600px) {
+  :root {
+    --container-max: 1440px;
+  }
+}
+
+/* Scope a resilient container in case project lacks one */
+.container {
+  width: min(var(--container-max), 100% - 2 * var(--container-pad));
+  margin-inline: auto;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Ensure media never overflows */
+picture,
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- 1) Powered Section ---------- */
+.powered {
+  position: relative;
+  min-height: 90svh;
+}
+.powered .powered__bg {
+  position: absolute;
+  inset: 0;
+  background: #efefef;
+  z-index: 0;
+}
+.powered .powered__left-media {
+  position: absolute;
+  left: max(-14vw, -160px);
+  bottom: -6vh;
+  z-index: 1;
+  width: min(66vw, 1180px);
+  pointer-events: none;
+}
+.powered .powered__left-media img {
+  width: 100%;
+}
+
+.powered .powered__rail {
+  position: relative;
+  z-index: 2;
+  min-height: 72svh;
+  display: grid;
+  align-content: start;
+  justify-items: end;
+  gap: clamp(12px, 2.4vw, 28px);
+  padding-block: clamp(20px, 5vh, 64px);
+}
+.powered .powered__badge {
+  width: min(820px, 68%);
+  height: auto;
+}
+.powered .powered__text {
+  width: min(820px, 32vw);
+  line-height: 1.6;
+  text-align: right;
+}
+.powered .powered__text h2 {
+  font-size: var(--step-3);
+  letter-spacing: 0.02em;
+  margin: 0 0 0.4em;
+}
+.powered .powered__text p {
+  margin: 0;
+  font-size: var(--step-1);
+  color: #2d2d2d;
+}
+
+/* Large desktop - give breathing room */
+@media (min-width: 1440px) {
+  .powered .powered__left-media {
+    left: -6vw;
+    width: min(58vw, 1280px);
+  }
+  .powered .powered__text {
+    width: min(900px, 30vw);
+  }
+}
+
+/* ≤ 1200px */
+@media (max-width: 1200px) {
+  .powered {
+    min-height: 100svh;
+  }
+  .powered .powered__left-media {
+    bottom: -2vh;
+    width: min(64vw, 1040px);
+  }
+  .powered .powered__text {
+    width: min(720px, 44vw);
+  }
+}
+
+/* ≤ 992px (tablet landscape / small laptop) */
+@media (max-width: 992px) {
+  .powered {
+    min-height: 68svh;
+  }
+  .powered .powered__left-media {
+    width: 70vw;
+    opacity: 0.98;
+    left: -8vw;
+  }
+  .powered .powered__rail {
+    justify-items: end;
+  }
+  .powered .powered__text {
+    width: min(720px, 62vw);
+    text-align: left;
+  }
+}
+
+/* ≤ 768px (tablet portrait) */
+@media (max-width: 768px) {
+  .powered {
+    min-height: 62svh;
+  }
+  .powered .powered__left-media {
+    width: 96vw;
+    left: -10vw;
+  }
+  .powered .powered__rail {
+    justify-items: stretch;
+  }
+  .powered .powered__badge {
+    width: min(560px, 92%);
+  }
+  .powered .powered__text {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: saturate(120%) blur(2px);
+    padding: 12px 14px;
+    border-radius: 8px;
+  }
+}
+
+/* ≤ 480px (mobile) */
+@media (max-width: 480px) {
+  .powered .powered__left-media {
+    width: 116vw;
+    left: -18vw;
+  }
+  .powered .powered__badge {
+    width: 92%;
+  }
+  .powered .powered__text h2 {
+    font-size: var(--step-2);
+  }
+}
+
+/* ---------- 2) Art & Science Section ---------- */
+/* Mobile: stack copy above image with tight spacing and solid contrast background */
+.artscience {
+  background: var(--muted);
+  padding-block: clamp(28px, 6vh, 48px);
+  color: #fff;
+  overflow: visible;
+}
+.artscience__inner {
+  display: block;
+  padding-inline: var(--container-pad);
+}
+.artscience__copy {
+  max-width: 72ch;
+  padding-inline: 0;
+  margin-bottom: clamp(12px, 4vw, 20px);
+}
+.artscience__eyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.95;
+}
+.artscience__lead {
+  margin: 0;
+  font-size: var(--step-1);
+  line-height: 1.5;
+}
+
+/* Media: centered and scaled on mobile */
+.artscience__media {
+  width: 100%;
+  margin-top: clamp(12px, 4vw, 24px);
+  justify-self: center;
+  align-self: center;
+  pointer-events: none;
+}
+
+/* Tablet / small laptop: switch to two-column grid */
+@media (min-width: 992px) {
+  .artscience__inner {
+    display: grid;
+    grid-template-columns: 1fr minmax(320px, 0.9fr);
+    gap: clamp(16px, 3vw, 44px);
+    align-items: center;
+    padding-block: clamp(36px, 8vh, 96px);
+  }
+  .artscience__media {
+    width: min(50vw, 980px);
+    justify-self: end;
+    margin-top: 0;
+  }
+  .artscience__copy {
+    padding-left: clamp(16px, 3vw, 48px);
+  }
+  .artscience__lead {
+    font-size: var(--step-2);
+  }
+}
+
+/* Slight adjustments for medium desktops */
+@media (min-width: 1200px) {
+  .artscience__media {
+    width: min(56vw, 980px);
+  }
+}
+
+/* ---------- 3) Overseer Section ---------- */
+/* Mobile baseline: stack logo, text, then graphic */
+.overseer {
+  background: #b0b1b2;
+  padding-block: clamp(28px, 6vh, 48px);
+  overflow: visible;
+}
+.overseer__inner {
+  display: block;
+  padding-inline: var(--container-pad);
+  text-align: center;
+}
+.overseer__logo {
+  width: min(86%, 420px);
+  margin-inline: auto 0;
+  display: block;
+}
+.overseer__text {
+  max-width: 56ch;
+  margin: 12px auto 0;
+  font-size: var(--step-0);
+  color: var(--text);
+}
+.overseer__media {
+  width: 100%;
+  margin-top: clamp(12px, 4vw, 24px);
+}
+
+/* Tablet and up - two column layout */
+@media (min-width: 992px) {
+  .overseer__inner {
+    display: grid;
+    grid-template-columns: minmax(320px, 32vw) 1fr;
+    gap: clamp(15px, 2vw, 40px);
+    align-items: center;
+    padding-block: clamp(32px, 7vh, 80px);
+  }
+  .overseer__logo {
+    width: min(520px, 34vw);
+    margin: 0;
+  }
+  .overseer__media {
+    width: min(60vw, 1200px);
+    justify-self: end;
+  }
+}
+
+/* ---------- 4) Core Tech Section ---------- */
+/* Mobile: stack copy then image */
+.coretech {
+  padding-block: clamp(28px, 6vh, 48px);
+  background: linear-gradient(180deg, #f5f6f7 0%, #ffffff 60%);
+}
+.coretech__inner {
+  display: block;
+  padding-inline: var(--container-pad);
+}
+.coretech__copy {
+  max-width: 72ch;
+  padding: 0;
+  margin-bottom: clamp(12px, 4vw, 20px);
+}
+.coretech__eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #6b6f74;
+}
+.coretech__lead {
+  margin: 0 0 1rem;
+  font-size: var(--step-0);
+  line-height: 1.6;
+  color: #2b2b2b;
+}
+.coretech__media {
+  width: 100%;
+  margin-top: clamp(12px, 4vw, 24px);
+  justify-self: center;
+  transform: none;
+}
+
+/* Tablet / desktop: two-column */
+@media (min-width: 992px) {
+  .coretech__inner {
+    display: grid;
+    grid-template-columns: minmax(320px, 0.95fr) 1fr;
+    gap: clamp(18px, 3vw, 48px);
+    align-items: center;
+    padding-block: clamp(40px, 8vh, 120px);
+  }
+  .coretech__media {
+    width: min(62vw, 1200px);
+    justify-self: end;
+    translate: 2% 0;
+  }
+  .coretech__lead {
+    font-size: var(--step-1);
+  }
+}
+
+/* Slightly smaller media on medium desktops (more breathing room) */
+@media (min-width: 1440px) {
+  .coretech__media {
+    width: min(54vw, 1320px);
+  }
+}
+
+/* When viewport is extremely narrow, limit left hero to avoid horizontal scrolling */
+@media (max-width: 420px) {
+  .powered__left-media {
+    left: -14vw;
+    width: 140vw;
+    bottom: -2vh;
+  }
+  .artscience__media,
+  .overseer__media,
+  .coretech__media {
+    width: 96vw;
+    margin-inline: auto;
+  }
+  .powered__text {
+    padding: 10px 8px;
+  }
+}
+
+/* ---------- Small utility: reduce padding for stacked modes ---------- */
+@media (max-width: 768px) {
+  .container {
+    padding-inline: 0;
+  }
+  .content-pad {
+    padding-inline: 12px;
+  }
+}

@@ -1,0 +1,362 @@
+/* responsive-typography.css */
+
+/* Base styles */
+:root {
+  /* Define a base font size for easier rem calculations */
+  font-size: 16px; /* Default for desktop */
+}
+
+/* Responsive typography using clamp() */
+
+/* Headings - Recalibrated based on h1: clamp(1.1rem, 3vw, 2.8rem) */
+.h1 {
+  font-size: clamp(1.1rem, 3vw, 2.8rem);
+}
+
+.h2 {
+  font-size: clamp(1.05rem, 2.5vw, 2.2rem);
+}
+
+.h3 {
+  font-size: clamp(1rem, 2vw, 1.8rem);
+}
+
+.h4 {
+  font-size: clamp(0.95rem, 1.8vw, 1.5rem);
+}
+
+.h5 {
+  font-size: clamp(0.9rem, 1.6vw, 1.3rem);
+}
+
+.h6 {
+  font-size: clamp(0.85rem, 1.4vw, 1.1rem);
+}
+
+/* Paragraphs - Adjusted to fit the new scale */
+p,
+ul li,
+span {
+  font-size: clamp(0.6rem, 1vw, 0.8rem);
+  line-height: 1.3;
+  margin-bottom: 0;
+}
+
+/* Smaller text elements (e.g., captions, labels) */
+small,
+.text-small {
+  font-size: clamp(0.75rem, 1.2vw, 0.85rem);
+  line-height: 1.6;
+}
+
+.left-bottom-label {
+  font-size: clamp(0.65rem, 1vw, 0.7rem);
+}
+
+.pill-tag {
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+}
+
+/* Responsive Image Rules */
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+.text-justify {
+  text-align: justify;
+}
+.justify-items-center {
+  justify-items: center;
+}
+.align-items-center {
+  align-items: center;
+}
+
+/* --- full image frame --- */
+.full-image-frame > .bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100% !important;
+  z-index: 0;
+}
+.full-image-frame .overlay > * {
+  pointer-events: auto; /* allow selection/copy */
+}
+.full-image-frame .overlay.bottom {
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 8%;
+}
+
+/* --- Left & Right & Center contents --- */
+.left-content .overlay {
+  padding-inline: min(8%, 6rem);
+  align-items: flex-start;
+}
+.right-content .overlay {
+  padding-inline: min(8%, 6rem);
+  align-items: flex-end;
+  text-align: end;
+}
+.center-content .overlay {
+  padding-inline: min(8%, 6rem);
+  align-items: center;
+}
+.left-content .overlay > *,
+.right-content .overlay > *,
+.center-content .overlay > * {
+  max-width: 55%;
+}
+
+/* --- position --- */
+.u-pos {
+  position: absolute;
+  top: var(--pos-top, auto);
+  right: var(--pos-right, auto);
+  bottom: var(--pos-bottom, auto);
+  left: var(--pos-left, auto);
+}
+.pos-relative {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.u-pos.vertical {
+  transform: rotate(-90deg);
+  transform-origin: top right;
+}
+
+/* --- max width --- */
+.max-width-80 {
+  max-width: 80%;
+}
+.max-width-70 {
+  max-width: 70%;
+}
+.max-width-60 {
+  max-width: 60%;
+}
+.max-width-50 {
+  max-width: 50%;
+}
+.max-width-40 {
+  max-width: 40%;
+}
+
+/* --- image height --- */
+.height-300-img {
+  height: auto;
+  width: auto;
+  max-height: 300px;
+}
+.height-120-img {
+  height: auto;
+  width: auto;
+  max-height: 120px;
+}
+.height-80-img {
+  height: auto;
+  width: auto;
+  max-height: 80px;
+}
+.height-60-img {
+  height: auto;
+  width: auto;
+  max-height: 60px;
+}
+.height-35-img {
+  height: auto;
+  width: auto;
+  max-height: 35px;
+}
+
+/* --- background color --- */
+.bg-white {
+  background-color: #ffffff;
+}
+.bg-black {
+  background: #000000;
+}
+
+/* learn overseer section */
+.learn-overseer-title {
+  font-size: clamp(0.8rem, 2.5vw, 2.2rem);
+}
+.learn-overseer-subtitle {
+  font-size: clamp(0.4rem, 1vw, 0.6rem);
+}
+.learn-overseer-text {
+  font-size: clamp(0.5rem, 1.2vw, 0.8rem);
+}
+.learn-more-contents {
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.ver-line {
+  width: 1px;
+  height: 80px;
+}
+.learn-overseer-subtitle {
+  letter-spacing: 0.08em;
+}
+.learn-overseer-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 2.4rem;
+  border-radius: 999px;
+  border: 1px solid #ffffff;
+  background: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+  font-family: var(--montserrat);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+.learn-overseer-btn:hover,
+.learn-overseer-btn:focus-visible {
+  background: #ffffff;
+  color: #181718;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* --- features grid --- */
+.features-grid-inner img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive Layout Adjustments */
+@media (max-width: 991.98px) {
+  .left-content .overlay,
+  .right-content .overlay,
+  .center-content .overlay {
+    padding-inline: min(5%, 2rem);
+  }
+
+  .height-300-img {
+    max-height: 110px;
+  }
+  .height-120-img {
+    max-height: 80px;
+  }
+  .height-80-img {
+    height: 60px;
+  }
+  .height-60-img {
+    height: 40px;
+  }
+  .height-35-img {
+    height: 25px;
+  }
+}
+
+/* Small mobile devices (e.g., up to 575.98px) */
+@media (max-width: 575.98px) {
+  .height-600-frame {
+    --img-w: 1200;
+    --img-h: 600;
+  }
+  .height-1000-frame {
+    --img-w: 1100;
+    --img-h: 1000;
+  }
+  .height-1500-frame {
+    --img-w: 1100;
+    --img-h: 1500;
+  }
+  .height-1800-frame {
+    --img-w: 1100;
+    --img-h: 1800;
+  }
+  .height-2000-frame {
+    --img-w: 1100;
+    --img-h: 2000;
+  }
+  :root {
+    font-size: 14px;
+  }
+  .height-120-img {
+    max-height: 35px;
+    width: auto;
+  }
+  .height-80-img {
+    height: 25px;
+  }
+  .row.mb-5 > div {
+    width: 100%;
+    justify-items: center;
+  }
+  .row.mb-5 {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .max-width-80 {
+    max-width: 95%;
+  }
+
+  /* Learn overseer section */
+  .learn-overseer-btn {
+    font-size: clamp(0.4rem, 1vw, 0.6rem);
+    padding: 0.2rem 0.6rem;
+  }
+  .learn-overseer-text {
+    margin-bottom: 0;
+  }
+  .learn-more-contents {
+    gap: 0.4rem;
+    margin-bottom: 0;
+    flex-direction: column;
+  }
+  .ver-line {
+    height: 50px;
+    display: none;
+  }
+}
+
+/* Tablets (e.g., 576px to 991.98px) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  :root {
+    font-size: 15px;
+  }
+  .height-120-img {
+    max-height: 100px;
+  }
+
+  /* Learn overseer section */
+  .ver-line {
+    height: 60px;
+  }
+  .learn-more-contents {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Desktops (e.g., 992px and up) */
+@media (min-width: 992px) {
+  :root {
+    font-size: 16px;
+  }
+}

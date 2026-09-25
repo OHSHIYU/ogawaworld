@@ -1,0 +1,199 @@
+/* =========================================
+   Banner
+========================================= */
+.lv-banner {
+  background-size: cover;
+  background-position: center;
+  padding: 56px 22px;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+.lv-banner__title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* =========================================
+   Grid Layout
+========================================= */
+.lv-grid {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  gap: 24px;
+  padding: 22px;
+  align-items: start;
+}
+
+.lv-main {
+  min-width: 0;
+}
+
+/* =========================================
+   Sidebar Navigation
+========================================= */
+.lv-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+.lv-nav__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  color: #111827;
+  font-size: 13px;
+  font-weight: 500;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.lv-nav__link:hover {
+  background: #111111;
+  color: #ffffff;
+  border-color: #111111;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+.lv-nav__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d1d5db;
+  flex: 0 0 10px;
+  transition: background 0.25s ease;
+}
+.lv-nav__link.is-active {
+  background: #000000;
+  border-color: #000000;
+  color: #ffffff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+.lv-nav__link.is-active .lv-nav__dot,
+.lv-nav__link:hover .lv-nav__dot {
+  background: #ffffff;
+}
+.lv-nav__text {
+  line-height: 1;
+}
+
+/* =========================================
+   Content Area
+========================================= */
+.lv-updated {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 2px 0 16px;
+}
+.legal-content {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+.legal-content h1,
+.legal-content h2,
+.legal-content h3 {
+  margin: 18px 0 10px;
+  color: #111827;
+  font-weight: 700;
+}
+.legal-content h1 {
+  font-size: 22px;
+}
+.legal-content h2 {
+  font-size: 19px;
+}
+.legal-content h3 {
+  font-size: 17px;
+}
+.legal-content p {
+  margin: 8px 0 14px;
+  line-height: 1.65;
+  color: #374151;
+}
+.legal-content ul {
+  margin: 8px 0 14px 22px;
+  color: #374151;
+}
+.legal-content li {
+  margin: 6px 0;
+  line-height: 1.6;
+}
+.legal-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================================
+   Table Scroll Fix (Proper Way)
+========================================= */
+.legal-content .table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 16px 0;
+  border-radius: 10px;
+}
+.legal-content table {
+  width: 100%;
+  min-width: 760px; /* slightly wider for better spacing */
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #ffffff;
+  font-size: 14px;
+}
+.legal-content thead th {
+  background: #111827;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 12px 14px;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+}
+.legal-content td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: top;
+}
+.legal-content th,
+.legal-content td {
+  border: none;
+}
+.legal-content pre,
+.legal-content code {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.legal-content a {
+  word-break: break-word;
+}
+
+/* =========================================
+   Responsive
+========================================= */
+@media (max-width: 900px) {
+  .lv-banner {
+    padding: 42px 16px;
+  }
+  .lv-banner__title {
+    font-size: 24px;
+  }
+  .lv-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px;
+  }
+}
