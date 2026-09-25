@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="<?= asset('css/manuals.css') ?>">
 
-<section class="man-hero" style="--hero:url('<?= asset('img/product/product-bg.avif') ?>');">
+<section class="man-hero" style="--hero:url('<?= asset('img/product/cosmo-x-bg.webp') ?>');">
   <div class="man-hero__inner">
     <h1 class="man-hero__title">Manuals & Downloads</h1>
     <p class="man-hero__sub">

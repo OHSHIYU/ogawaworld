@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="<?= asset('css/float.css') ?>">
 
 <!-- HERO -->
-<section class="imagine imagine--bg" style="--hero:url('<?= asset('img/product/product-bg.avif') ?>');" data-reveal="fade-up">
+<section class="imagine imagine--bg" style="--hero:url('<?= asset('img/product/cosmo-x-bg.webp') ?>');" data-reveal="fade-up">
   <div class="imagine__inner">
     <div class="imagine__text" data-reveal="fade-up" style="--reveal-delay: 120ms">
       <h1 class="imagine__title">IMAGINE BETTER LIVING</h1>
